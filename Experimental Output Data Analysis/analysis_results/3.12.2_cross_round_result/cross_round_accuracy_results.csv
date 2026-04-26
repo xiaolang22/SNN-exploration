@@ -1,0 +1,28 @@
+﻿analysis,model,train_sheets,test_sheet,accuracy
+single_sheet_train,Random Forest,ALL,ALL2,0.8583333333333333
+single_sheet_train,Ridge Classifier,ALL,ALL2,0.55
+single_sheet_train,Logistic Regression,ALL,ALL2,0.7416666666666667
+single_sheet_train,Random Forest,ALL,ALL3,0.9
+single_sheet_train,Ridge Classifier,ALL,ALL3,0.5583333333333333
+single_sheet_train,Logistic Regression,ALL,ALL3,0.8
+single_sheet_train,Random Forest,ALL2,ALL,0.9
+single_sheet_train,Ridge Classifier,ALL2,ALL,0.44166666666666665
+single_sheet_train,Logistic Regression,ALL2,ALL,0.6666666666666666
+single_sheet_train,Random Forest,ALL2,ALL3,0.8833333333333333
+single_sheet_train,Ridge Classifier,ALL2,ALL3,0.36666666666666664
+single_sheet_train,Logistic Regression,ALL2,ALL3,0.5666666666666667
+single_sheet_train,Random Forest,ALL3,ALL,0.9083333333333333
+single_sheet_train,Ridge Classifier,ALL3,ALL,0.5416666666666666
+single_sheet_train,Logistic Regression,ALL3,ALL,0.8
+single_sheet_train,Random Forest,ALL3,ALL2,0.85
+single_sheet_train,Ridge Classifier,ALL3,ALL2,0.49166666666666664
+single_sheet_train,Logistic Regression,ALL3,ALL2,0.75
+two_sheet_train,Random Forest,ALL + ALL2,ALL3,0.8916666666666667
+two_sheet_train,Ridge Classifier,ALL + ALL2,ALL3,0.5
+two_sheet_train,Logistic Regression,ALL + ALL2,ALL3,0.7
+two_sheet_train,Random Forest,ALL + ALL3,ALL2,0.875
+two_sheet_train,Ridge Classifier,ALL + ALL3,ALL2,0.5333333333333333
+two_sheet_train,Logistic Regression,ALL + ALL3,ALL2,0.8
+two_sheet_train,Random Forest,ALL2 + ALL3,ALL,0.9166666666666666
+two_sheet_train,Ridge Classifier,ALL2 + ALL3,ALL,0.475
+two_sheet_train,Logistic Regression,ALL2 + ALL3,ALL,0.7166666666666667

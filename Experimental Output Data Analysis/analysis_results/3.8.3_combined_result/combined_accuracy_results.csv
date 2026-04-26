@@ -1,0 +1,4 @@
+﻿model,accuracy_mean,accuracy_std,n_samples,n_features
+Random Forest,0.7527777777777778,0.05310974222111109,360,100
+Logistic Regression,0.5694444444444444,0.04392052305789416,360,100
+Ridge Classifier,0.525,0.1026484003845599,360,100
