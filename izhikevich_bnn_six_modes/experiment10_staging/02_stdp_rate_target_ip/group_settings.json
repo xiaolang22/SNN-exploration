@@ -1,0 +1,16 @@
+{
+  "group_name": "02_stdp_rate_target_ip",
+  "seed": 42,
+  "stdp_enabled": true,
+  "ip_enabled": true,
+  "ip_method": "rate_target",
+  "target_mu_hz": 10.0,
+  "tau_cal_ms": 64.0,
+  "epsilon_hz": 1.0,
+  "eta_bias": 0.0005,
+  "eta_gain": 0.0001,
+  "bias_min": -1.0,
+  "bias_max": 5.0,
+  "gain_min": 0.5,
+  "gain_max": 2.0
+}

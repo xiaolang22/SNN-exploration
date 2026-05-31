@@ -1,0 +1,119 @@
+{
+  "group": "04_spikl_ip_only",
+  "config": {
+    "n_total": 1000,
+    "n_rounds": 3,
+    "reps_per_mode": 20,
+    "stimulus_gain": 40.0,
+    "seed": 42,
+    "stdp_enabled": false,
+    "ip_enabled": true,
+    "ip_method": "spikl",
+    "ip_target_mu_hz": 10.0,
+    "ip_tau_cal_ms": 64.0,
+    "ip_eta_bias": 0.0005,
+    "ip_eta_gain": 0.0001
+  },
+  "hotspots": {
+    "distance_mm": 2.2002667867315586,
+    "alpha": 0.005
+  },
+  "classification": {
+    "raw_counts": [
+      {
+        "mean": 0.8333333333333334,
+        "std": 0.10540925533894598
+      },
+      {
+        "mean": 0.7916666666666666,
+        "std": 0.11334558757279535
+      },
+      {
+        "mean": 0.8,
+        "std": 0.09279607271383368
+      }
+    ],
+    "v100": [
+      {
+        "mean": 0.6833333333333333,
+        "std": 0.15723301886761007
+      },
+      {
+        "mean": 0.6416666666666667,
+        "std": 0.1396921217853351
+      },
+      {
+        "mean": 0.7333333333333333,
+        "std": 0.10408329997330663
+      }
+    ]
+  },
+  "functional_metrics": [
+    {
+      "avg_correlation": 0.10904152268402675,
+      "global_efficiency": 0.6482154882154881,
+      "modularity": 0.08467930759729334
+    },
+    {
+      "avg_correlation": 0.12129790339658411,
+      "global_efficiency": 0.6954882154882154,
+      "modularity": 0.07918868874022258
+    },
+    {
+      "avg_correlation": 0.1351847176062661,
+      "global_efficiency": 0.6782828282828283,
+      "modularity": 0.06802271976429679
+    }
+  ],
+  "warmup_ip_metrics": {
+    "mean_rate_hz": 1.2211378101606465,
+    "silent_neuron_ratio": 0.907,
+    "distribution_entropy_bits": 0.8281366369791249,
+    "kl_divergence": 1.6767592602732377,
+    "bias_mean": 0.04796860172869941,
+    "bias_std": 0.39010766931557095,
+    "gain_mean": 1.0089985863626105,
+    "gain_std": 0.006868870041740461
+  },
+  "ip_metrics": [
+    {
+      "mean_rate_hz": 1.7508494441372633,
+      "silent_neuron_ratio": 0.851,
+      "distribution_entropy_bits": 1.0465617929299713,
+      "kl_divergence": 1.5539834792625422,
+      "bias_mean": 0.10153564146355877,
+      "bias_std": 0.40102425592258384,
+      "gain_mean": 1.0193994963095883,
+      "gain_std": 0.01181794600863521,
+      "burst_like_trial_ratio": 0.0,
+      "max_trial_mfr": 11.0,
+      "trial_mfr_cv": 0.7503555180877213
+    },
+    {
+      "mean_rate_hz": 1.8260389568047908,
+      "silent_neuron_ratio": 0.84,
+      "distribution_entropy_bits": 1.0589808167071133,
+      "kl_divergence": 1.551375267946109,
+      "bias_mean": 0.15404581504161036,
+      "bias_std": 0.4142895120631217,
+      "gain_mean": 1.0295952790252045,
+      "gain_std": 0.016968923573698638,
+      "burst_like_trial_ratio": 0.0,
+      "max_trial_mfr": 11.2,
+      "trial_mfr_cv": 0.7365063340573582
+    },
+    {
+      "mean_rate_hz": 2.0885332616757744,
+      "silent_neuron_ratio": 0.789,
+      "distribution_entropy_bits": 1.2214112011498286,
+      "kl_divergence": 1.4605371049323732,
+      "bias_mean": 0.2054522668048449,
+      "bias_std": 0.4284513451336168,
+      "gain_mean": 1.0395782193778567,
+      "gain_std": 0.022156206771585942,
+      "burst_like_trial_ratio": 0.0,
+      "max_trial_mfr": 12.4,
+      "trial_mfr_cv": 0.6899926636713727
+    }
+  ]
+}
