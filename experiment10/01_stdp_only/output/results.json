@@ -9,10 +9,10 @@
     "stdp_enabled": true,
     "ip_enabled": false,
     "ip_method": "none",
-    "ip_target_mu_hz": 10.0,
+    "ip_target_mu_hz": 5.0,
     "ip_tau_cal_ms": 64.0,
-    "ip_eta_bias": 0.0005,
-    "ip_eta_gain": 0.0001
+    "ip_eta_bias": 0.0001,
+    "ip_eta_gain": 2e-05
   },
   "hotspots": {
     "distance_mm": 2.1823024396054453,
@@ -52,24 +52,24 @@
     {
       "avg_correlation": 0.1135812546915461,
       "global_efficiency": 0.5996969696969697,
-      "modularity": 0.07278330962541488
+      "modularity": 0.07000119832342631
     },
     {
       "avg_correlation": 0.15318573276052014,
       "global_efficiency": 0.6416498316498296,
-      "modularity": 0.05650905712188022
+      "modularity": 0.05376300911311961
     },
     {
       "avg_correlation": 0.24444488332972955,
       "global_efficiency": 0.7521885521885521,
-      "modularity": 0.028576644933793735
+      "modularity": 0.03004757045739839
     }
   ],
   "warmup_ip_metrics": {
     "mean_rate_hz": 1.1133448702388162,
     "silent_neuron_ratio": 0.915,
-    "distribution_entropy_bits": 0.761738098407779,
-    "kl_divergence": 1.7124082200772668,
+    "distribution_entropy_bits": 0.8553633410048577,
+    "kl_divergence": 1.7382529903766795,
     "bias_mean": 0.0013799570354091632,
     "bias_std": 0.3885292834748112,
     "gain_mean": 1.0,
@@ -79,8 +79,8 @@
     {
       "mean_rate_hz": 1.3506462295582597,
       "silent_neuron_ratio": 0.886,
-      "distribution_entropy_bits": 0.8762205163329866,
-      "kl_divergence": 1.6370550548687237,
+      "distribution_entropy_bits": 1.6728896918609417,
+      "kl_divergence": 1.1131791829016482,
       "bias_mean": 0.0013799570354091632,
       "bias_std": 0.3885292834748112,
       "gain_mean": 1.0,
@@ -92,8 +92,8 @@
     {
       "mean_rate_hz": 1.3972536967011226,
       "silent_neuron_ratio": 0.862,
-      "distribution_entropy_bits": 0.9256352577410363,
-      "kl_divergence": 1.6025533661836355,
+      "distribution_entropy_bits": 1.7878934733974188,
+      "kl_divergence": 1.095725424704205,
       "bias_mean": 0.0013799570354091632,
       "bias_std": 0.3885292834748112,
       "gain_mean": 1.0,
@@ -105,8 +105,8 @@
     {
       "mean_rate_hz": 1.47808582675648,
       "silent_neuron_ratio": 0.843,
-      "distribution_entropy_bits": 0.9464033977459669,
-      "kl_divergence": 1.5934079884937433,
+      "distribution_entropy_bits": 1.8341948710560942,
+      "kl_divergence": 1.0157230585293306,
       "bias_mean": 0.0013799570354091632,
       "bias_std": 0.3885292834748112,
       "gain_mean": 1.0,
