@@ -52,17 +52,17 @@
     {
       "avg_correlation": 0.1135812546915461,
       "global_efficiency": 0.5996969696969697,
-      "modularity": 0.07000119832342631
+      "modularity": 0.0679300997486218
     },
     {
       "avg_correlation": 0.15318573276052014,
       "global_efficiency": 0.6416498316498296,
-      "modularity": 0.05376300911311961
+      "modularity": 0.057275936303566005
     },
     {
       "avg_correlation": 0.24444488332972955,
       "global_efficiency": 0.7521885521885521,
-      "modularity": 0.03004757045739839
+      "modularity": 0.030032383494601925
     }
   ],
   "warmup_ip_metrics": {
