@@ -1,0 +1,143 @@
+{
+  "selected_label": "gen06_offspring",
+  "selected_metrics": {
+    "fitness": 0.8558988972202989,
+    "separation_score": 0.7995788972202988,
+    "rank_score": 1.0,
+    "distance_ratio": 1.6652531305452911,
+    "pattern_distance_ratio": 1.6760356904776594,
+    "decode_score": 0.875,
+    "activity_score": 0.704,
+    "silent_neuron_ratio": 0.29600000000000004,
+    "burst_penalty": 0.0,
+    "density_penalty": 0.0,
+    "total_synapses": 25193
+  },
+  "evolved_metrics": {
+    "fitness": 0.8558988972202989,
+    "separation_score": 0.7995788972202988,
+    "rank_score": 1.0,
+    "distance_ratio": 1.6652531305452911,
+    "pattern_distance_ratio": 1.6760356904776594,
+    "decode_score": 0.875,
+    "activity_score": 0.704,
+    "silent_neuron_ratio": 0.29600000000000004,
+    "burst_penalty": 0.0,
+    "density_penalty": 0.0,
+    "total_synapses": 25193
+  },
+  "baseline_metrics": {
+    "fitness": 0.5997092374178938,
+    "separation_score": 0.5437892374178939,
+    "rank_score": 1.0,
+    "distance_ratio": 1.4380187754259943,
+    "pattern_distance_ratio": 1.3545551471879511,
+    "decode_score": 0.7083333333333334,
+    "activity_score": 0.699,
+    "silent_neuron_ratio": 0.30100000000000005,
+    "burst_penalty": 0.0,
+    "density_penalty": 0.0,
+    "total_synapses": 25193
+  },
+  "history": [
+    {
+      "generation": 0.0,
+      "best_fitness": 0.7618044583936044,
+      "mean_fitness": 0.6184721526405967,
+      "best_silent_neuron_ratio": 0.362,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 1.0,
+      "best_fitness": 0.7618044583936044,
+      "mean_fitness": 0.6916577422411121,
+      "best_silent_neuron_ratio": 0.362,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 2.0,
+      "best_fitness": 0.8417736927541032,
+      "mean_fitness": 0.7268137218148297,
+      "best_silent_neuron_ratio": 0.31100000000000005,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 3.0,
+      "best_fitness": 0.8417736927541032,
+      "mean_fitness": 0.7149413070723798,
+      "best_silent_neuron_ratio": 0.31100000000000005,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 4.0,
+      "best_fitness": 0.8417736927541032,
+      "mean_fitness": 0.7226061130543568,
+      "best_silent_neuron_ratio": 0.31100000000000005,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 5.0,
+      "best_fitness": 0.8417736927541032,
+      "mean_fitness": 0.7185711997887722,
+      "best_silent_neuron_ratio": 0.31100000000000005,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 6.0,
+      "best_fitness": 0.8417736927541032,
+      "mean_fitness": 0.7284966610603394,
+      "best_silent_neuron_ratio": 0.31100000000000005,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 7.0,
+      "best_fitness": 0.8558988972202989,
+      "mean_fitness": 0.7161059528945456,
+      "best_silent_neuron_ratio": 0.29600000000000004,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 8.0,
+      "best_fitness": 0.8558988972202989,
+      "mean_fitness": 0.7062561235022213,
+      "best_silent_neuron_ratio": 0.29600000000000004,
+      "best_burst_penalty": 0.0
+    },
+    {
+      "generation": 9.0,
+      "best_fitness": 0.8558988972202989,
+      "mean_fitness": 0.7216526381847105,
+      "best_silent_neuron_ratio": 0.29600000000000004,
+      "best_burst_penalty": 0.0
+    }
+  ],
+  "alpha": 0.005,
+  "sigmas": {
+    "100.0": 0.4,
+    "300.0": 0.4,
+    "500.0": 0.4
+  },
+  "area_centers": [
+    [
+      1.2552128361013266,
+      0.9027985709384106
+    ],
+    [
+      3.364311505020447,
+      1.3961473398422177
+    ]
+  ],
+  "degree_matched_metrics": {
+    "fitness": 0.5997903074197278,
+    "separation_score": 0.5464303074197279,
+    "rank_score": 1.0,
+    "distance_ratio": 1.443318172768339,
+    "pattern_distance_ratio": 1.4242303182346128,
+    "decode_score": 0.625,
+    "activity_score": 0.667,
+    "silent_neuron_ratio": 0.33299999999999996,
+    "burst_penalty": 0.0,
+    "density_penalty": 0.0,
+    "total_synapses": 25193
+  }
+}

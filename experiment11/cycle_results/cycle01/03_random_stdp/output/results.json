@@ -1,0 +1,75 @@
+{
+  "group": {
+    "name": "03_random_stdp",
+    "label": "Random topology + STDP",
+    "topology_mode": "random",
+    "stdp_enabled": true
+  },
+  "config": {
+    "n_total": 1000,
+    "n_rounds": 3,
+    "reps_per_mode": 20,
+    "stimulus_gain": 40.0,
+    "seed": 42
+  },
+  "hotspots": {
+    "distance_mm": 2.1823024396054453,
+    "alpha": 0.005
+  },
+  "topology_metrics": {
+    "total_synapses": 25193,
+    "avg_in_degree": 25.193,
+    "avg_out_degree": 25.193,
+    "std_in_degree": 4.988161084006811,
+    "std_out_degree": 5.245736459259081,
+    "mean_connection_distance_mm": 1.416667846295345
+  },
+  "structure_evolution": null,
+  "classification": {
+    "raw_counts": [
+      {
+        "mean": 0.8,
+        "std": 0.12472191289246472
+      },
+      {
+        "mean": 0.775,
+        "std": 0.14930394055974094
+      },
+      {
+        "mean": 0.8416666666666666,
+        "std": 0.05833333333333332
+      }
+    ],
+    "v100": [
+      {
+        "mean": 0.675,
+        "std": 0.10833333333333334
+      },
+      {
+        "mean": 0.7250000000000001,
+        "std": 0.14930394055974094
+      },
+      {
+        "mean": 0.7416666666666667,
+        "std": 0.13149778198382917
+      }
+    ]
+  },
+  "functional_metrics": [
+    {
+      "avg_correlation": 0.1135812546915461,
+      "global_efficiency": 0.5996969696969697,
+      "modularity": 0.06717457144199676
+    },
+    {
+      "avg_correlation": 0.15318573276052014,
+      "global_efficiency": 0.6416498316498296,
+      "modularity": 0.05291557609268253
+    },
+    {
+      "avg_correlation": 0.24444488332972955,
+      "global_efficiency": 0.7521885521885521,
+      "modularity": 0.02624457630301556
+    }
+  ]
+}

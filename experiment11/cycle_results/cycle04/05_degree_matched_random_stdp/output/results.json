@@ -1,0 +1,235 @@
+{
+  "group": {
+    "name": "05_degree_matched_random_stdp",
+    "label": "Degree-matched random topology + STDP",
+    "topology_mode": "degree_matched_random",
+    "stdp_enabled": true
+  },
+  "config": {
+    "n_total": 1000,
+    "n_rounds": 3,
+    "reps_per_mode": 20,
+    "stimulus_gain": 40.0,
+    "seed": 42
+  },
+  "hotspots": {
+    "distance_mm": 2.1168089260629737,
+    "alpha": 0.005
+  },
+  "topology_metrics": {
+    "total_synapses": 25193,
+    "avg_in_degree": 25.193,
+    "avg_out_degree": 25.193,
+    "std_in_degree": 5.102327998080876,
+    "std_out_degree": 5.0135567215301355,
+    "mean_connection_distance_mm": 1.5677314172116614
+  },
+  "structure_evolution": {
+    "selected_label": "degree_matched_random",
+    "selected_metrics": {
+      "fitness": 0.6782948191232736,
+      "separation_score": 0.6022630730915276,
+      "rank_score": 1.0,
+      "distance_ratio": 1.4932074666772608,
+      "pattern_distance_ratio": 1.454459767585133,
+      "decode_score": 0.8333333333333334,
+      "plasticity_decode_score": 0.5833333333333333,
+      "activity_score": 1.0,
+      "silent_neuron_ratio": 0.0,
+      "burst_penalty": 0.02996031746031746,
+      "density_penalty": 0.0,
+      "total_synapses": 25193
+    },
+    "evolved_metrics": {
+      "fitness": 0.8563338992183781,
+      "separation_score": 0.7864529468374257,
+      "rank_score": 1.0,
+      "distance_ratio": 1.4927952595631342,
+      "pattern_distance_ratio": 1.4040220370487577,
+      "decode_score": 0.875,
+      "plasticity_decode_score": 1.0,
+      "activity_score": 0.8999999999999999,
+      "silent_neuron_ratio": 0.10000000000000009,
+      "burst_penalty": 0.025148809523809528,
+      "density_penalty": 0.0,
+      "total_synapses": 25193
+    },
+    "baseline_metrics": {
+      "fitness": 0.7653488633193188,
+      "separation_score": 0.7009837839542394,
+      "rank_score": 1.0,
+      "distance_ratio": 1.4380187754259943,
+      "pattern_distance_ratio": 1.3545551471879511,
+      "decode_score": 0.7083333333333334,
+      "plasticity_decode_score": 0.9166666666666667,
+      "activity_score": 0.8249999999999998,
+      "silent_neuron_ratio": 0.17500000000000016,
+      "burst_penalty": 0.022668650793650796,
+      "density_penalty": 0.0,
+      "total_synapses": 25193
+    },
+    "history": [
+      {
+        "generation": 0.0,
+        "best_fitness": 0.7158022363239335,
+        "mean_fitness": 0.603270304256055,
+        "best_silent_neuron_ratio": 0.09166666666666679,
+        "best_burst_penalty": 0.02611607142857143
+      },
+      {
+        "generation": 1.0,
+        "best_fitness": 0.7923840173534122,
+        "mean_fitness": 0.6687058760740054,
+        "best_silent_neuron_ratio": 0.13333333333333353,
+        "best_burst_penalty": 0.024578373015873015
+      },
+      {
+        "generation": 2.0,
+        "best_fitness": 0.7923840173534122,
+        "mean_fitness": 0.6998871043564461,
+        "best_silent_neuron_ratio": 0.13333333333333353,
+        "best_burst_penalty": 0.024578373015873015
+      },
+      {
+        "generation": 3.0,
+        "best_fitness": 0.8155002151156011,
+        "mean_fitness": 0.7112820567053354,
+        "best_silent_neuron_ratio": 0.15000000000000013,
+        "best_burst_penalty": 0.024553571428571435
+      },
+      {
+        "generation": 4.0,
+        "best_fitness": 0.8544437207881289,
+        "mean_fitness": 0.7249686826495754,
+        "best_silent_neuron_ratio": 0.050000000000000044,
+        "best_burst_penalty": 0.03025793650793651
+      },
+      {
+        "generation": 5.0,
+        "best_fitness": 0.8544437207881289,
+        "mean_fitness": 0.7230147884492977,
+        "best_silent_neuron_ratio": 0.050000000000000044,
+        "best_burst_penalty": 0.03025793650793651
+      },
+      {
+        "generation": 6.0,
+        "best_fitness": 0.8544437207881289,
+        "mean_fitness": 0.7379217678518724,
+        "best_silent_neuron_ratio": 0.050000000000000044,
+        "best_burst_penalty": 0.03025793650793651
+      },
+      {
+        "generation": 7.0,
+        "best_fitness": 0.8544437207881289,
+        "mean_fitness": 0.74167256623002,
+        "best_silent_neuron_ratio": 0.050000000000000044,
+        "best_burst_penalty": 0.03025793650793651
+      },
+      {
+        "generation": 8.0,
+        "best_fitness": 0.8544437207881289,
+        "mean_fitness": 0.760342178220045,
+        "best_silent_neuron_ratio": 0.050000000000000044,
+        "best_burst_penalty": 0.03025793650793651
+      },
+      {
+        "generation": 9.0,
+        "best_fitness": 0.8563338992183781,
+        "mean_fitness": 0.7370706739397419,
+        "best_silent_neuron_ratio": 0.10000000000000009,
+        "best_burst_penalty": 0.025148809523809528
+      },
+      {
+        "generation": 10.0,
+        "best_fitness": 0.8563338992183781,
+        "mean_fitness": 0.7432803678162019,
+        "best_silent_neuron_ratio": 0.10000000000000009,
+        "best_burst_penalty": 0.025148809523809528
+      },
+      {
+        "generation": 11.0,
+        "best_fitness": 0.8563338992183781,
+        "mean_fitness": 0.7651002366918569,
+        "best_silent_neuron_ratio": 0.10000000000000009,
+        "best_burst_penalty": 0.025148809523809528
+      }
+    ],
+    "alpha": 0.005,
+    "sigmas": {
+      "100.0": 0.4,
+      "300.0": 0.4,
+      "500.0": 0.4
+    },
+    "area_centers": [
+      [
+        1.2552128361013266,
+        0.9027985709384106
+      ],
+      [
+        3.364311505020447,
+        1.3961473398422177
+      ]
+    ],
+    "degree_matched_metrics": {
+      "fitness": 0.6782948191232736,
+      "separation_score": 0.6022630730915276,
+      "rank_score": 1.0,
+      "distance_ratio": 1.4932074666772608,
+      "pattern_distance_ratio": 1.454459767585133,
+      "decode_score": 0.8333333333333334,
+      "plasticity_decode_score": 0.5833333333333333,
+      "activity_score": 1.0,
+      "silent_neuron_ratio": 0.0,
+      "burst_penalty": 0.02996031746031746,
+      "density_penalty": 0.0,
+      "total_synapses": 25193
+    }
+  },
+  "classification": {
+    "raw_counts": [
+      {
+        "mean": 0.8,
+        "std": 0.08498365855987976
+      },
+      {
+        "mean": 0.825,
+        "std": 0.08700255424092125
+      },
+      {
+        "mean": 0.8583333333333334,
+        "std": 0.06508541396588878
+      }
+    ],
+    "v100": [
+      {
+        "mean": 0.6583333333333333,
+        "std": 0.14166666666666666
+      },
+      {
+        "mean": 0.6833333333333333,
+        "std": 0.11666666666666667
+      },
+      {
+        "mean": 0.7333333333333333,
+        "std": 0.10408329997330665
+      }
+    ]
+  },
+  "functional_metrics": [
+    {
+      "avg_correlation": 0.13152147220015475,
+      "global_efficiency": 0.673737373737374,
+      "modularity": 0.06766427798810168
+    },
+    {
+      "avg_correlation": 0.16642173853567457,
+      "global_efficiency": 0.6948484848484848,
+      "modularity": 0.059017714113489245
+    },
+    {
+      "avg_correlation": 0.22093650885752622,
+      "global_efficiency": 0.7703030303030303,
+      "modularity": 0.047173744280924336
+    }
+  ]
+}

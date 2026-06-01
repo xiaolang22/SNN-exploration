@@ -6,6 +6,8 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
+from sklearn.linear_model import RidgeClassifier
+from sklearn.model_selection import StratifiedKFold
 
 from src.config import Config
 from src.experiment import Experiment
@@ -32,6 +34,8 @@ class CandidateMetrics:
     rank_score: float
     distance_ratio: float
     pattern_distance_ratio: float
+    decode_score: float
+    plasticity_decode_score: float
     activity_score: float
     silent_neuron_ratio: float
     burst_penalty: float
@@ -49,6 +53,8 @@ class CandidateMetrics:
             "rank_score": float(self.rank_score),
             "distance_ratio": float(self.distance_ratio),
             "pattern_distance_ratio": float(self.pattern_distance_ratio),
+            "decode_score": float(self.decode_score),
+            "plasticity_decode_score": float(self.plasticity_decode_score),
             "activity_score": float(self.activity_score),
             "silent_neuron_ratio": float(self.silent_neuron_ratio),
             "burst_penalty": float(self.burst_penalty),
@@ -189,6 +195,7 @@ class StructureEvolver:
         record_counts = []
         active_union = np.zeros(model.n_total, dtype=bool)
         peak_fractions = []
+        trial_active_fractions = []
         labels = []
         mode_defs = [
             ("A1_100mV", self.area_centers[0], self.cfg.stim.voltages_mv[0]),
@@ -202,18 +209,21 @@ class StructureEvolver:
             scfg.short_response_window_start_ms,
             scfg.short_response_window_end_ms,
         )
-
-        for mode_label, center, voltage in mode_defs:
-            sigma = self.sigmas[voltage]
-            pulse_currents = build_pulse_currents(
+        pulse_cache = {
+            (mode_label, voltage): build_pulse_currents(
                 model.positions,
                 center,
                 voltage,
                 self.alpha,
-                sigma,
+                self.sigmas[voltage],
                 self.cfg.network.stimulus_current_gain,
                 self.cfg.stim.pulse_phases,
             )
+            for mode_label, center, voltage in mode_defs
+        }
+
+        for mode_label, center, voltage in mode_defs:
+            pulse_currents = pulse_cache[(mode_label, voltage)]
             for _ in range(scfg.short_eval_trials_per_mode):
                 detail = model.run_segment_detailed(
                     scfg.short_eval_trial_duration_ms,
@@ -225,6 +235,7 @@ class StructureEvolver:
                 states.append(detail["active_mask"].astype(float))
                 active_union |= detail["active_mask"]
                 peak_fractions.append(float(detail["peak_window_activity"]) / model.n_total)
+                trial_active_fractions.append(float(np.mean(detail["active_mask"])))
                 labels.append(mode_label)
 
         state_matrix = np.array(states, dtype=float)
@@ -235,13 +246,24 @@ class StructureEvolver:
         distance_ratio = self._compute_distance_ratio(feature_matrix, np.array(labels))
         pattern_distance_ratio = self._compute_distance_ratio(normalized_feature_matrix, np.array(labels))
         pattern_score = self._ratio_to_unit_score(pattern_distance_ratio)
+        raw_distance_score = self._ratio_to_unit_score(distance_ratio)
+        decode_score = self._quick_decode_score(feature_matrix, np.array(labels))
+        plasticity_decode_score = self._evaluate_plasticity_decode(
+            model, mode_defs, pulse_cache, response_window
+        )
         separation_score = (
             scfg.fitness_rank_weight * rank_score
             + scfg.fitness_pattern_weight * pattern_score
+            + scfg.fitness_raw_distance_weight * raw_distance_score
+            + scfg.fitness_decode_weight * decode_score
+            + scfg.fitness_plasticity_decode_weight * plasticity_decode_score
         )
         activity_score = float(active_union.mean())
         silent_neurons = np.flatnonzero(~active_union)
-        burst_penalty = self._compute_burst_penalty(np.array(peak_fractions, dtype=float))
+        burst_penalty = self._compute_burst_penalty(
+            np.array(peak_fractions, dtype=float),
+            np.array(trial_active_fractions, dtype=float),
+        )
         density_penalty = abs(int(adjacency.sum()) - self.target_synapse_count) / max(1, self.target_synapse_count)
         fitness = (
             separation_score
@@ -256,6 +278,8 @@ class StructureEvolver:
             rank_score=rank_score,
             distance_ratio=float(distance_ratio),
             pattern_distance_ratio=float(pattern_distance_ratio),
+            decode_score=float(decode_score),
+            plasticity_decode_score=float(plasticity_decode_score),
             activity_score=activity_score,
             silent_neuron_ratio=float(1.0 - activity_score),
             burst_penalty=burst_penalty,
@@ -303,12 +327,68 @@ class StructureEvolver:
         scaled = (ratio - floor) / (ceiling - floor)
         return float(np.clip(scaled, 0.0, 1.0))
 
-    def _compute_burst_penalty(self, peak_fractions: np.ndarray) -> float:
-        if peak_fractions.size == 0:
+    def _compute_burst_penalty(self, peak_fractions: np.ndarray,
+                               trial_active_fractions: np.ndarray) -> float:
+        if peak_fractions.size == 0 and trial_active_fractions.size == 0:
             return 0.0
-        threshold = self.structure_cfg.burst_active_fraction_threshold
-        penalties = np.maximum(0.0, peak_fractions - threshold) / max(1e-6, 1.0 - threshold)
-        return float(np.mean(penalties))
+        peak_threshold = self.structure_cfg.burst_active_fraction_threshold
+        peak_penalties = np.maximum(0.0, peak_fractions - peak_threshold) / max(1e-6, 1.0 - peak_threshold)
+        trial_threshold = self.structure_cfg.burst_trial_active_fraction_threshold
+        trial_penalties = np.maximum(0.0, trial_active_fractions - trial_threshold) / max(1e-6, 1.0 - trial_threshold)
+        peak_term = float(np.mean(peak_penalties)) if peak_penalties.size > 0 else 0.0
+        trial_term = float(np.mean(trial_penalties)) if trial_penalties.size > 0 else 0.0
+        return 0.5 * peak_term + 0.5 * trial_term
+
+    def _quick_decode_score(self, features: np.ndarray, labels: np.ndarray) -> float:
+        unique, counts = np.unique(labels, return_counts=True)
+        if len(unique) < 2 or counts.min() < 2:
+            return 0.0
+        n_folds = min(self.structure_cfg.quick_decode_folds, int(counts.min()))
+        if n_folds < 2:
+            return 0.0
+        cv = StratifiedKFold(n_splits=n_folds, shuffle=True, random_state=self.base_seed)
+        scores = []
+        for train_idx, test_idx in cv.split(features, labels):
+            clf = RidgeClassifier(alpha=1.0)
+            clf.fit(features[train_idx], labels[train_idx])
+            scores.append(float(clf.score(features[test_idx], labels[test_idx])))
+        return float(np.mean(scores)) if scores else 0.0
+
+    def _evaluate_plasticity_decode(self, model: ReservoirModel,
+                                    mode_defs: list[tuple[str, np.ndarray, float]],
+                                    pulse_cache: dict[tuple[str, float], dict[int, np.ndarray]],
+                                    response_window: tuple[float, float]) -> float:
+        scfg = self.structure_cfg
+        if scfg.adaptation_trials_per_mode <= 0 or scfg.post_adaptation_trials_per_mode <= 0:
+            return 0.0
+
+        for mode_label, _center, voltage in mode_defs:
+            pulse_currents = pulse_cache[(mode_label, voltage)]
+            for _ in range(scfg.adaptation_trials_per_mode):
+                model.run_segment(
+                    scfg.short_eval_trial_duration_ms,
+                    pulse_currents=pulse_currents,
+                    plasticity=True,
+                    response_window_ms=response_window,
+                )
+
+        features = []
+        labels = []
+        for mode_label, _center, voltage in mode_defs:
+            pulse_currents = pulse_cache[(mode_label, voltage)]
+            for _ in range(scfg.post_adaptation_trials_per_mode):
+                detail = model.run_segment_detailed(
+                    scfg.short_eval_trial_duration_ms,
+                    pulse_currents=pulse_currents,
+                    plasticity=False,
+                    response_window_ms=response_window,
+                )
+                features.append(detail["record_counts"])
+                labels.append(mode_label)
+
+        if not features:
+            return 0.0
+        return self._quick_decode_score(np.array(features, dtype=float), np.array(labels))
 
     def _rewire_source(self, adjacency: np.ndarray, source: int, target: int, rng: np.random.Generator) -> bool:
         if source == target or adjacency[source, target]:

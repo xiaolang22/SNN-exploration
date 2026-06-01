@@ -1,0 +1,221 @@
+{
+  "group": {
+    "name": "04_evolved_stdp",
+    "label": "Evolved topology + STDP",
+    "topology_mode": "evolved",
+    "stdp_enabled": true
+  },
+  "config": {
+    "n_total": 1000,
+    "n_rounds": 3,
+    "reps_per_mode": 20,
+    "stimulus_gain": 40.0,
+    "seed": 42
+  },
+  "hotspots": {
+    "distance_mm": 2.1825606378003926,
+    "alpha": 0.005
+  },
+  "topology_metrics": {
+    "total_synapses": 25559,
+    "avg_in_degree": 25.559,
+    "avg_out_degree": 25.559,
+    "std_in_degree": 5.105146325033202,
+    "std_out_degree": 5.247143889774703,
+    "mean_connection_distance_mm": 1.4116153687897197
+  },
+  "structure_evolution": {
+    "selected_label": "gen03_innovation",
+    "selected_metrics": {
+      "fitness": 0.9454569807182253,
+      "separation_score": 0.9146889419773052,
+      "rank_score": 1.0,
+      "distance_ratio": 1.5485851814966298,
+      "pattern_distance_ratio": 1.5135607818834547,
+      "decode_score": 0.875,
+      "plasticity_decode_score": 1.0,
+      "activity_score": 0.688,
+      "silent_neuron_ratio": 0.31200000000000006,
+      "burst_penalty": 0.0,
+      "density_penalty": 0.014527845036319613,
+      "total_synapses": 25559
+    },
+    "evolved_metrics": {
+      "fitness": 0.9454569807182253,
+      "separation_score": 0.9146889419773052,
+      "rank_score": 1.0,
+      "distance_ratio": 1.5485851814966298,
+      "pattern_distance_ratio": 1.5135607818834547,
+      "decode_score": 0.875,
+      "plasticity_decode_score": 1.0,
+      "activity_score": 0.688,
+      "silent_neuron_ratio": 0.31200000000000006,
+      "burst_penalty": 0.0,
+      "density_penalty": 0.014527845036319613,
+      "total_synapses": 25559
+    },
+    "baseline_metrics": {
+      "fitness": 0.8171837839542395,
+      "separation_score": 0.7822337839542395,
+      "rank_score": 1.0,
+      "distance_ratio": 1.4380187754259943,
+      "pattern_distance_ratio": 1.3545551471879511,
+      "decode_score": 0.7083333333333334,
+      "plasticity_decode_score": 0.9166666666666667,
+      "activity_score": 0.699,
+      "silent_neuron_ratio": 0.30100000000000005,
+      "burst_penalty": 0.0,
+      "density_penalty": 0.0,
+      "total_synapses": 25193
+    },
+    "history": [
+      {
+        "generation": 0.0,
+        "best_fitness": 0.8083078032974677,
+        "mean_fitness": 0.6682673686154313,
+        "best_silent_neuron_ratio": 0.398,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 1.0,
+        "best_fitness": 0.8615383422468574,
+        "mean_fitness": 0.7671254051863814,
+        "best_silent_neuron_ratio": 0.27,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 2.0,
+        "best_fitness": 0.8640677878270555,
+        "mean_fitness": 0.8105148300244297,
+        "best_silent_neuron_ratio": 0.375,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 3.0,
+        "best_fitness": 0.8640677878270555,
+        "mean_fitness": 0.788429422937155,
+        "best_silent_neuron_ratio": 0.375,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 4.0,
+        "best_fitness": 0.9454569807182253,
+        "mean_fitness": 0.8123648907677717,
+        "best_silent_neuron_ratio": 0.31200000000000006,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 5.0,
+        "best_fitness": 0.9454569807182253,
+        "mean_fitness": 0.7899253686028105,
+        "best_silent_neuron_ratio": 0.31200000000000006,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 6.0,
+        "best_fitness": 0.9454569807182253,
+        "mean_fitness": 0.7991620219904793,
+        "best_silent_neuron_ratio": 0.31200000000000006,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 7.0,
+        "best_fitness": 0.9454569807182253,
+        "mean_fitness": 0.7749465683914212,
+        "best_silent_neuron_ratio": 0.31200000000000006,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 8.0,
+        "best_fitness": 0.9454569807182253,
+        "mean_fitness": 0.7946200321480433,
+        "best_silent_neuron_ratio": 0.31200000000000006,
+        "best_burst_penalty": 0.0
+      },
+      {
+        "generation": 9.0,
+        "best_fitness": 0.9454569807182253,
+        "mean_fitness": 0.8168692488828002,
+        "best_silent_neuron_ratio": 0.31200000000000006,
+        "best_burst_penalty": 0.0
+      }
+    ],
+    "alpha": 0.005,
+    "sigmas": {
+      "100.0": 0.4,
+      "300.0": 0.4,
+      "500.0": 0.4
+    },
+    "area_centers": [
+      [
+        1.2552128361013266,
+        0.9027985709384106
+      ],
+      [
+        3.364311505020447,
+        1.3961473398422177
+      ]
+    ],
+    "degree_matched_metrics": {
+      "fitness": 0.7552546152286136,
+      "separation_score": 0.7208865764876935,
+      "rank_score": 1.0,
+      "distance_ratio": 1.537232710411192,
+      "pattern_distance_ratio": 1.561751460719443,
+      "decode_score": 0.9166666666666666,
+      "plasticity_decode_score": 0.5833333333333333,
+      "activity_score": 0.76,
+      "silent_neuron_ratio": 0.24,
+      "burst_penalty": 0.0,
+      "density_penalty": 0.014527845036319613,
+      "total_synapses": 25559
+    }
+  },
+  "classification": {
+    "raw_counts": [
+      {
+        "mean": 0.8166666666666667,
+        "std": 0.097182531580755
+      },
+      {
+        "mean": 0.8083333333333333,
+        "std": 0.10573814617041269
+      },
+      {
+        "mean": 0.875,
+        "std": 0.13043729868748774
+      }
+    ],
+    "v100": [
+      {
+        "mean": 0.725,
+        "std": 0.08374896350934075
+      },
+      {
+        "mean": 0.6583333333333334,
+        "std": 0.15567951410224504
+      },
+      {
+        "mean": 0.8166666666666667,
+        "std": 0.12247448713915889
+      }
+    ]
+  },
+  "functional_metrics": [
+    {
+      "avg_correlation": 0.16672800873173135,
+      "global_efficiency": 0.7278787878787879,
+      "modularity": 0.044872710068977854
+    },
+    {
+      "avg_correlation": 0.22807931690864094,
+      "global_efficiency": 0.7509090909090909,
+      "modularity": 0.03379841365053751
+    },
+    {
+      "avg_correlation": 0.2652371658862964,
+      "global_efficiency": 0.7584848484848485,
+      "modularity": 0.028949810027904685
+    }
+  ]
+}

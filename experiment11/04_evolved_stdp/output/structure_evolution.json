@@ -1,125 +1,131 @@
 {
-  "selected_label": "gen02_offspring",
+  "selected_label": "gen04_offspring",
   "selected_metrics": {
-    "fitness": 0.8795814290449367,
-    "separation_score": 0.7966614290449368,
+    "fitness": 0.9063315352621021,
+    "separation_score": 0.8770666543097212,
     "rank_score": 1.0,
-    "distance_ratio": 1.6591356406251825,
-    "pattern_distance_ratio": 1.728881905393249,
-    "activity_score": 0.691,
-    "silent_neuron_ratio": 0.30900000000000005,
-    "burst_penalty": 0.0,
+    "distance_ratio": 1.558575922439285,
+    "pattern_distance_ratio": 1.5995875930661332,
+    "decode_score": 0.7916666666666666,
+    "plasticity_decode_score": 1.0,
+    "activity_score": 0.6125,
+    "silent_neuron_ratio": 0.38749999999999996,
+    "burst_penalty": 0.012475198412698412,
     "density_penalty": 0.0,
     "total_synapses": 25193
   },
   "evolved_metrics": {
-    "fitness": 0.8795814290449367,
-    "separation_score": 0.7966614290449368,
+    "fitness": 0.9063315352621021,
+    "separation_score": 0.8770666543097212,
     "rank_score": 1.0,
-    "distance_ratio": 1.6591356406251825,
-    "pattern_distance_ratio": 1.728881905393249,
-    "activity_score": 0.691,
-    "silent_neuron_ratio": 0.30900000000000005,
-    "burst_penalty": 0.0,
+    "distance_ratio": 1.558575922439285,
+    "pattern_distance_ratio": 1.5995875930661332,
+    "decode_score": 0.7916666666666666,
+    "plasticity_decode_score": 1.0,
+    "activity_score": 0.6125,
+    "silent_neuron_ratio": 0.38749999999999996,
+    "burst_penalty": 0.012475198412698412,
     "density_penalty": 0.0,
     "total_synapses": 25193
   },
   "baseline_metrics": {
-    "fitness": 0.6055700005478262,
-    "separation_score": 0.5250500005478261,
+    "fitness": 0.7879659268113823,
+    "separation_score": 0.7468171172875728,
     "rank_score": 1.0,
-    "distance_ratio": 1.431688022599826,
-    "pattern_distance_ratio": 1.3667333340637682,
-    "activity_score": 0.671,
-    "silent_neuron_ratio": 0.32899999999999996,
-    "burst_penalty": 0.0,
+    "distance_ratio": 1.4380187754259943,
+    "pattern_distance_ratio": 1.3545551471879511,
+    "decode_score": 0.7083333333333334,
+    "plasticity_decode_score": 0.9166666666666667,
+    "activity_score": 0.9124999999999999,
+    "silent_neuron_ratio": 0.08750000000000013,
+    "burst_penalty": 0.022668650793650796,
     "density_penalty": 0.0,
     "total_synapses": 25193
   },
   "history": [
     {
       "generation": 0.0,
-      "best_fitness": 0.698843497384058,
-      "mean_fitness": 0.6342793134837671,
-      "best_silent_neuron_ratio": 0.29500000000000004,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.7558337700011817,
+      "mean_fitness": 0.6290787169213896,
+      "best_silent_neuron_ratio": 0.4916666666666667,
+      "best_burst_penalty": 0.015054563492063492
     },
     {
       "generation": 1.0,
-      "best_fitness": 0.7291065717811542,
-      "mean_fitness": 0.6510461032426662,
-      "best_silent_neuron_ratio": 0.31499999999999995,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.7745239677232072,
+      "mean_fitness": 0.7083620321904105,
+      "best_silent_neuron_ratio": 0.3541666666666665,
+      "best_burst_penalty": 0.015228174603174603
     },
     {
       "generation": 2.0,
-      "best_fitness": 0.7481506372859489,
-      "mean_fitness": 0.6832490587332904,
-      "best_silent_neuron_ratio": 0.29200000000000004,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.8738038731504402,
+      "mean_fitness": 0.7108257377937296,
+      "best_silent_neuron_ratio": 0.09583333333333344,
+      "best_burst_penalty": 0.024652777777777777
     },
     {
       "generation": 3.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.717834393445467,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.8738038731504402,
+      "mean_fitness": 0.7529959104596224,
+      "best_silent_neuron_ratio": 0.09583333333333344,
+      "best_burst_penalty": 0.024652777777777777
     },
     {
       "generation": 4.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.6824714741549127,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.8738038731504402,
+      "mean_fitness": 0.7788626508568484,
+      "best_silent_neuron_ratio": 0.09583333333333344,
+      "best_burst_penalty": 0.024652777777777777
     },
     {
       "generation": 5.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.6849006969908416,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.9063315352621021,
+      "mean_fitness": 0.7717137533594909,
+      "best_silent_neuron_ratio": 0.38749999999999996,
+      "best_burst_penalty": 0.012475198412698412
     },
     {
       "generation": 6.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.7295816911722905,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.9063315352621021,
+      "mean_fitness": 0.7517398957035752,
+      "best_silent_neuron_ratio": 0.38749999999999996,
+      "best_burst_penalty": 0.012475198412698412
     },
     {
       "generation": 7.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.7372237186619581,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.9063315352621021,
+      "mean_fitness": 0.7403188833894783,
+      "best_silent_neuron_ratio": 0.38749999999999996,
+      "best_burst_penalty": 0.012475198412698412
     },
     {
       "generation": 8.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.7001473947491785,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.9063315352621021,
+      "mean_fitness": 0.7453696293712361,
+      "best_silent_neuron_ratio": 0.38749999999999996,
+      "best_burst_penalty": 0.012475198412698412
     },
     {
       "generation": 9.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.7218773879853878,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.9063315352621021,
+      "mean_fitness": 0.7727578607898634,
+      "best_silent_neuron_ratio": 0.38749999999999996,
+      "best_burst_penalty": 0.012475198412698412
     },
     {
       "generation": 10.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.7079535386778699,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.9063315352621021,
+      "mean_fitness": 0.775851064297361,
+      "best_silent_neuron_ratio": 0.38749999999999996,
+      "best_burst_penalty": 0.012475198412698412
     },
     {
       "generation": 11.0,
-      "best_fitness": 0.8795814290449367,
-      "mean_fitness": 0.7178351030480432,
-      "best_silent_neuron_ratio": 0.30900000000000005,
-      "best_burst_penalty": 0.0
+      "best_fitness": 0.9063315352621021,
+      "mean_fitness": 0.7806722307460511,
+      "best_silent_neuron_ratio": 0.38749999999999996,
+      "best_burst_penalty": 0.012475198412698412
     }
   ],
   "alpha": 0.005,
@@ -139,14 +145,16 @@
     ]
   ],
   "degree_matched_metrics": {
-    "fitness": 0.6435084928281285,
-    "separation_score": 0.5560284928281285,
+    "fitness": 0.6505102526313773,
+    "separation_score": 0.6115072764409011,
     "rank_score": 1.0,
-    "distance_ratio": 1.4614965464730836,
-    "pattern_distance_ratio": 1.4080379904375047,
-    "activity_score": 0.729,
-    "silent_neuron_ratio": 0.271,
-    "burst_penalty": 0.0,
+    "distance_ratio": 1.4143712782423694,
+    "pattern_distance_ratio": 1.3977659922505359,
+    "decode_score": 0.625,
+    "plasticity_decode_score": 0.6666666666666666,
+    "activity_score": 0.9375,
+    "silent_neuron_ratio": 0.0625,
+    "burst_penalty": 0.02874503968253968,
     "density_penalty": 0.0,
     "total_synapses": 25193
   }
