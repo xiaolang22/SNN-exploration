@@ -31,6 +31,7 @@ class CandidateMetrics:
     separation_score: float
     rank_score: float
     distance_ratio: float
+    pattern_distance_ratio: float
     activity_score: float
     silent_neuron_ratio: float
     burst_penalty: float
@@ -47,6 +48,7 @@ class CandidateMetrics:
             "separation_score": float(self.separation_score),
             "rank_score": float(self.rank_score),
             "distance_ratio": float(self.distance_ratio),
+            "pattern_distance_ratio": float(self.pattern_distance_ratio),
             "activity_score": float(self.activity_score),
             "silent_neuron_ratio": float(self.silent_neuron_ratio),
             "burst_penalty": float(self.burst_penalty),
@@ -186,7 +188,7 @@ class StructureEvolver:
         states = []
         record_counts = []
         active_union = np.zeros(model.n_total, dtype=bool)
-        burst_flags = []
+        peak_fractions = []
         labels = []
         mode_defs = [
             ("A1_100mV", self.area_centers[0], self.cfg.stim.voltages_mv[0]),
@@ -222,18 +224,24 @@ class StructureEvolver:
                 record_counts.append(detail["record_counts"])
                 states.append(detail["active_mask"].astype(float))
                 active_union |= detail["active_mask"]
-                burst_flags.append(float(detail["burst_flag"]))
+                peak_fractions.append(float(detail["peak_window_activity"]) / model.n_total)
                 labels.append(mode_label)
 
         state_matrix = np.array(states, dtype=float)
         feature_matrix = np.array(record_counts, dtype=float)
+        normalized_feature_matrix = self._normalize_count_features(feature_matrix)
         rank_denom = min(max(1, state_matrix.shape[0]), scfg.max_rank_normalization_trials)
         rank_score = float(np.linalg.matrix_rank(state_matrix) / rank_denom)
         distance_ratio = self._compute_distance_ratio(feature_matrix, np.array(labels))
-        separation_score = rank_score
+        pattern_distance_ratio = self._compute_distance_ratio(normalized_feature_matrix, np.array(labels))
+        pattern_score = self._ratio_to_unit_score(pattern_distance_ratio)
+        separation_score = (
+            scfg.fitness_rank_weight * rank_score
+            + scfg.fitness_pattern_weight * pattern_score
+        )
         activity_score = float(active_union.mean())
         silent_neurons = np.flatnonzero(~active_union)
-        burst_penalty = float(np.mean(burst_flags)) if burst_flags else 0.0
+        burst_penalty = self._compute_burst_penalty(np.array(peak_fractions, dtype=float))
         density_penalty = abs(int(adjacency.sum()) - self.target_synapse_count) / max(1, self.target_synapse_count)
         fitness = (
             separation_score
@@ -247,6 +255,7 @@ class StructureEvolver:
             separation_score=separation_score,
             rank_score=rank_score,
             distance_ratio=float(distance_ratio),
+            pattern_distance_ratio=float(pattern_distance_ratio),
             activity_score=activity_score,
             silent_neuron_ratio=float(1.0 - activity_score),
             burst_penalty=burst_penalty,
@@ -281,6 +290,25 @@ class StructureEvolver:
         if within_mean <= 1e-8:
             return 0.0
         return float(np.mean(between) / within_mean)
+
+    def _normalize_count_features(self, features: np.ndarray) -> np.ndarray:
+        totals = features.sum(axis=1, keepdims=True)
+        totals[totals <= 1e-8] = 1.0
+        return features / totals
+
+    def _ratio_to_unit_score(self, ratio: float) -> float:
+        scfg = self.structure_cfg
+        floor = scfg.pattern_ratio_floor
+        ceiling = max(floor + 1e-6, scfg.pattern_ratio_ceiling)
+        scaled = (ratio - floor) / (ceiling - floor)
+        return float(np.clip(scaled, 0.0, 1.0))
+
+    def _compute_burst_penalty(self, peak_fractions: np.ndarray) -> float:
+        if peak_fractions.size == 0:
+            return 0.0
+        threshold = self.structure_cfg.burst_active_fraction_threshold
+        penalties = np.maximum(0.0, peak_fractions - threshold) / max(1e-6, 1.0 - threshold)
+        return float(np.mean(penalties))
 
     def _rewire_source(self, adjacency: np.ndarray, source: int, target: int, rng: np.random.Generator) -> bool:
         if source == target or adjacency[source, target]:

@@ -79,27 +79,31 @@ class ExperimentParams:
 @dataclass
 class StructureEvolutionParams:
     topology_mode: str = "random"
-    population_size: int = 20
-    elite_size: int = 5
+    population_size: int = 16
+    elite_size: int = 4
     offspring_per_elite: int = 3
-    generations: int = 10
-    innovation_count: int = 5
+    generations: int = 12
+    innovation_count: int = 4
     mutation_rate: float = 0.01
-    short_eval_warmup_ms: float = 5000.0
-    short_eval_trials_per_mode: int = 3
+    short_eval_warmup_ms: float = 3000.0
+    short_eval_trials_per_mode: int = 4
     short_eval_trial_duration_ms: float = 200.0
     short_response_window_start_ms: float = 5.0
     short_response_window_end_ms: float = 55.0
-    fitness_activity_weight: float = 0.25
-    fitness_burst_weight: float = 0.40
-    fitness_density_weight: float = 0.35
-    burst_active_fraction_threshold: float = 0.12
-    silent_repair_additions: int = 4
-    local_rewire_count: int = 4
-    bridge_rewire_count: int = 4
+    fitness_rank_weight: float = 0.25
+    fitness_pattern_weight: float = 0.75
+    fitness_activity_weight: float = 0.12
+    fitness_burst_weight: float = 0.75
+    fitness_density_weight: float = 0.25
+    pattern_ratio_floor: float = 1.0
+    pattern_ratio_ceiling: float = 2.0
+    burst_active_fraction_threshold: float = 0.08
+    silent_repair_additions: int = 2
+    local_rewire_count: int = 6
+    bridge_rewire_count: int = 6
     degree_swap_factor: int = 5
     evaluation_seed_offset: int = 1000
-    max_rank_normalization_trials: int = 18
+    max_rank_normalization_trials: int = 24
 
 
 @dataclass

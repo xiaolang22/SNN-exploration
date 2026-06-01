@@ -59,17 +59,17 @@
     {
       "avg_correlation": 0.1135812546915461,
       "global_efficiency": 0.5996969696969697,
-      "modularity": 0.07007572819506637
+      "modularity": 0.0664713152172911
     },
     {
       "avg_correlation": 0.15318573276052014,
       "global_efficiency": 0.6416498316498296,
-      "modularity": 0.05539324957172073
+      "modularity": 0.05916459613159065
     },
     {
       "avg_correlation": 0.24444488332972955,
       "global_efficiency": 0.7521885521885521,
-      "modularity": 0.029353672014828483
+      "modularity": 0.028926932465786342
     }
   ]
 }
