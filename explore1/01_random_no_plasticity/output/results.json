@@ -45,17 +45,17 @@
     {
       "avg_correlation": 0.08924225908487125,
       "global_efficiency": 0.5198989898989899,
-      "modularity": 0.08411301283996893
+      "modularity": 0.08535001301631895
     },
     {
       "avg_correlation": 0.07197170741242588,
       "global_efficiency": 0.47375420875420987,
-      "modularity": 0.09433810886351285
+      "modularity": 0.09248016737643819
     },
     {
       "avg_correlation": 0.08425111742091305,
       "global_efficiency": 0.50003367003367,
-      "modularity": 0.08033708383304508
+      "modularity": 0.081209494312765
     }
   ],
   "topology_metrics": [
