@@ -1,0 +1,2469 @@
+{
+  "group": "02_random_topology_plasticity",
+  "config": {
+    "n_total": 1000,
+    "n_rounds": 3,
+    "reps_per_mode": 20,
+    "stimulus_gain": 40.0,
+    "seed": 42,
+    "topology_plasticity": {
+      "enabled": true,
+      "update_interval_rounds": 1,
+      "max_add_per_update": 48,
+      "max_prune_per_update": 48,
+      "max_edge_fraction_per_update": 0.002
+    }
+  },
+  "hotspots": {
+    "distance_mm": 2.16603097923721,
+    "alpha": 0.005
+  },
+  "classification": {
+    "raw_counts": [
+      {
+        "mean": 0.8416666666666666,
+        "std": 0.12610621625351298
+      },
+      {
+        "mean": 0.85,
+        "std": 0.08975274678557507
+      },
+      {
+        "mean": 0.9,
+        "std": 0.0816496580927726
+      }
+    ],
+    "v100": [
+      {
+        "mean": 0.7583333333333334,
+        "std": 0.10833333333333335
+      },
+      {
+        "mean": 0.7333333333333334,
+        "std": 0.10408329997330663
+      },
+      {
+        "mean": 0.7,
+        "std": 0.1452966314513558
+      }
+    ]
+  },
+  "functional_metrics": [
+    {
+      "avg_correlation": 0.08924225908487125,
+      "global_efficiency": 0.5198989898989899,
+      "modularity": 0.08651413380296044
+    },
+    {
+      "avg_correlation": 0.07333539163584442,
+      "global_efficiency": 0.49414141414141394,
+      "modularity": 0.1040290602209668
+    },
+    {
+      "avg_correlation": 0.07244594717734075,
+      "global_efficiency": 0.514915824915825,
+      "modularity": 0.06914246757075472
+    }
+  ],
+  "topology_metrics": [
+    {
+      "n_edges": 25193,
+      "avg_in_degree": 25.193,
+      "avg_out_degree": 25.193,
+      "std_in_degree": 4.988161084006811,
+      "std_out_degree": 5.245736459259081,
+      "mean_connection_distance_mm": 1.416667846295345,
+      "clustering_coefficient": 0.04994043689429264,
+      "largest_component_fraction": 1.0,
+      "approx_path_length": 2.0323523523523526
+    },
+    {
+      "n_edges": 25193,
+      "avg_in_degree": 25.193,
+      "avg_out_degree": 25.193,
+      "std_in_degree": 5.024913034073326,
+      "std_out_degree": 5.382355525232423,
+      "mean_connection_distance_mm": 1.4157097212484684,
+      "clustering_coefficient": 0.04998031529249146,
+      "largest_component_fraction": 1.0,
+      "approx_path_length": 2.0325705705705706
+    },
+    {
+      "n_edges": 25193,
+      "avg_in_degree": 25.193,
+      "avg_out_degree": 25.193,
+      "std_in_degree": 5.085051720484266,
+      "std_out_degree": 5.4735501276593785,
+      "mean_connection_distance_mm": 1.4148791388562514,
+      "clustering_coefficient": 0.05001482486006622,
+      "largest_component_fraction": 1.0,
+      "approx_path_length": 2.032752752752753
+    }
+  ],
+  "topology_updates": [
+    {
+      "added": 48,
+      "removed": 48,
+      "candidate_pairs": 105372,
+      "selected_pairs": [
+        {
+          "src": 417,
+          "tgt": 99,
+          "score": 57.77697583316051,
+          "count": 64,
+          "consistency": 0.2878456241132445,
+          "specificity": 0.3125,
+          "distance_mm": 1.0633926010176924
+        },
+        {
+          "src": 400,
+          "tgt": 876,
+          "score": 56.9490397764791,
+          "count": 63,
+          "consistency": 0.3153051640082725,
+          "specificity": 0.31746031746031744,
+          "distance_mm": 0.5136219070958492
+        },
+        {
+          "src": 400,
+          "tgt": 556,
+          "score": 55.94465675365079,
+          "count": 62,
+          "consistency": 0.2137139328784284,
+          "specificity": 0.3225806451612903,
+          "distance_mm": 1.0191816749686775
+        },
+        {
+          "src": 562,
+          "tgt": 998,
+          "score": 55.08946491492792,
+          "count": 61,
+          "consistency": 0.2122199523118025,
+          "specificity": 0.32786885245901637,
+          "distance_mm": 0.5840359982717593
+        },
+        {
+          "src": 417,
+          "tgt": 998,
+          "score": 55.07696545299713,
+          "count": 61,
+          "consistency": 0.2738384445123995,
+          "specificity": 0.32786885245901637,
+          "distance_mm": 1.0479323246829413
+        },
+        {
+          "src": 400,
+          "tgt": 148,
+          "score": 53.35834566983212,
+          "count": 59,
+          "consistency": 0.3206870339883757,
+          "specificity": 0.3389830508474576,
+          "distance_mm": 0.5362541920047131
+        },
+        {
+          "src": 562,
+          "tgt": 697,
+          "score": 53.276699200331066,
+          "count": 59,
+          "consistency": 0.25537269503615406,
+          "specificity": 0.3389830508474576,
+          "distance_mm": 0.9934900227780566
+        },
+        {
+          "src": 400,
+          "tgt": 969,
+          "score": 52.43454046917731,
+          "count": 58,
+          "consistency": 0.24609106121996416,
+          "specificity": 0.3448275862068966,
+          "distance_mm": 0.3874064897643899
+        },
+        {
+          "src": 417,
+          "tgt": 944,
+          "score": 52.359961233762746,
+          "count": 58,
+          "consistency": 0.29278147626965695,
+          "specificity": 0.3448275862068966,
+          "distance_mm": 1.3899961266832754
+        },
+        {
+          "src": 417,
+          "tgt": 697,
+          "score": 51.50977270649796,
+          "count": 57,
+          "consistency": 0.28806976762523606,
+          "specificity": 0.3508771929824561,
+          "distance_mm": 0.8901654288890015
+        },
+        {
+          "src": 400,
+          "tgt": 476,
+          "score": 50.647782608097,
+          "count": 56,
+          "consistency": 0.2790142430819793,
+          "specificity": 0.35714285714285715,
+          "distance_mm": 0.48532368455229097
+        },
+        {
+          "src": 400,
+          "tgt": 111,
+          "score": 49.763369780272456,
+          "count": 55,
+          "consistency": 0.2846004400854172,
+          "specificity": 0.36363636363636365,
+          "distance_mm": 0.38615007229069065
+        },
+        {
+          "src": 400,
+          "tgt": 10,
+          "score": 49.747456889029856,
+          "count": 55,
+          "consistency": 0.2806376334564078,
+          "specificity": 0.36363636363636365,
+          "distance_mm": 0.523483548257205
+        },
+        {
+          "src": 400,
+          "tgt": 276,
+          "score": 48.81200796807804,
+          "count": 54,
+          "consistency": 0.21290885543182675,
+          "specificity": 0.37037037037037035,
+          "distance_mm": 0.5324005055761553
+        },
+        {
+          "src": 400,
+          "tgt": 457,
+          "score": 48.796294396745374,
+          "count": 54,
+          "consistency": 0.19721612443618852,
+          "specificity": 0.37037037037037035,
+          "distance_mm": 0.6032261984267888
+        },
+        {
+          "src": 535,
+          "tgt": 556,
+          "score": 48.78790277042343,
+          "count": 54,
+          "consistency": 0.25325211580406065,
+          "specificity": 0.37037037037037035,
+          "distance_mm": 0.9953404141695248
+        },
+        {
+          "src": 399,
+          "tgt": 962,
+          "score": 48.768930055531705,
+          "count": 54,
+          "consistency": 0.2786379765861293,
+          "specificity": 0.35185185185185186,
+          "distance_mm": 1.25061572331405
+        },
+        {
+          "src": 399,
+          "tgt": 556,
+          "score": 48.75882324830398,
+          "count": 54,
+          "consistency": 0.24841300280446577,
+          "specificity": 0.37037037037037035,
+          "distance_mm": 1.259520513866181
+        },
+        {
+          "src": 400,
+          "tgt": 909,
+          "score": 48.74493091186265,
+          "count": 54,
+          "consistency": 0.178760219193594,
+          "specificity": 0.35185185185185186,
+          "distance_mm": 0.9412794943456573
+        },
+        {
+          "src": 562,
+          "tgt": 955,
+          "score": 47.926246827677666,
+          "count": 53,
+          "consistency": 0.20818703879272124,
+          "specificity": 0.33962264150943394,
+          "distance_mm": 0.24105100262107643
+        },
+        {
+          "src": 399,
+          "tgt": 759,
+          "score": 47.88913501037916,
+          "count": 53,
+          "consistency": 0.2701817601235637,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.1040835391522807
+        },
+        {
+          "src": 400,
+          "tgt": 759,
+          "score": 47.878852220507426,
+          "count": 53,
+          "consistency": 0.2640903906426718,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.1734089057246517
+        },
+        {
+          "src": 535,
+          "tgt": 759,
+          "score": 47.86235790272357,
+          "count": 53,
+          "consistency": 0.26441180936665887,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.3401198865450925
+        },
+        {
+          "src": 417,
+          "tgt": 955,
+          "score": 47.849847227439746,
+          "count": 53,
+          "consistency": 0.1787524174101787,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 0.9940999836226642
+        },
+        {
+          "src": 400,
+          "tgt": 958,
+          "score": 47.829491434011295,
+          "count": 53,
+          "consistency": 0.1917379820728958,
+          "specificity": 0.33962264150943394,
+          "distance_mm": 1.1181351273257123
+        },
+        {
+          "src": 400,
+          "tgt": 960,
+          "score": 47.82523961174171,
+          "count": 53,
+          "consistency": 0.19844631267215812,
+          "specificity": 0.2830188679245283,
+          "distance_mm": 0.9711340739779897
+        },
+        {
+          "src": 535,
+          "tgt": 962,
+          "score": 47.08170580907332,
+          "count": 52,
+          "consistency": 0.31070689049703987,
+          "specificity": 0.36538461538461536,
+          "distance_mm": 0.35336826853897757
+        },
+        {
+          "src": 161,
+          "tgt": 278,
+          "score": 47.02601664187298,
+          "count": 52,
+          "consistency": 0.21778288386942596,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 0.4761009810136444
+        },
+        {
+          "src": 505,
+          "tgt": 697,
+          "score": 46.983394983582485,
+          "count": 52,
+          "consistency": 0.23715136260390596,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 1.0088441969582302
+        },
+        {
+          "src": 521,
+          "tgt": 556,
+          "score": 46.98276440438993,
+          "count": 52,
+          "consistency": 0.21551704884173614,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 0.8961612631917603
+        },
+        {
+          "src": 521,
+          "tgt": 979,
+          "score": 46.959253255030966,
+          "count": 52,
+          "consistency": 0.18635786111099573,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 0.9708972242624069
+        },
+        {
+          "src": 400,
+          "tgt": 963,
+          "score": 46.932982069275745,
+          "count": 52,
+          "consistency": 0.15618787392438413,
+          "specificity": 0.34615384615384615,
+          "distance_mm": 0.91382799844214
+        },
+        {
+          "src": 382,
+          "tgt": 998,
+          "score": 46.143876850482805,
+          "count": 51,
+          "consistency": 0.3488753128952847,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 1.048673167076416
+        },
+        {
+          "src": 161,
+          "tgt": 941,
+          "score": 46.1321002722614,
+          "count": 51,
+          "consistency": 0.2265047457749823,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 0.493400830128803
+        },
+        {
+          "src": 562,
+          "tgt": 86,
+          "score": 46.104514447068226,
+          "count": 51,
+          "consistency": 0.18402148742739793,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 0.5356011611488192
+        },
+        {
+          "src": 400,
+          "tgt": 925,
+          "score": 46.060362044366414,
+          "count": 51,
+          "consistency": 0.19101123595505617,
+          "specificity": 0.35294117647058826,
+          "distance_mm": 0.8587060599710408
+        },
+        {
+          "src": 399,
+          "tgt": 894,
+          "score": 46.04581656629132,
+          "count": 51,
+          "consistency": 0.1999269944991739,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 1.2100602578126254
+        },
+        {
+          "src": 399,
+          "tgt": 979,
+          "score": 46.04546703585141,
+          "count": 51,
+          "consistency": 0.1708776918889466,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 1.0537843978554802
+        },
+        {
+          "src": 562,
+          "tgt": 839,
+          "score": 46.00514816731972,
+          "count": 51,
+          "consistency": 0.17240550780441674,
+          "specificity": 0.35294117647058826,
+          "distance_mm": 1.3085133256094428
+        },
+        {
+          "src": 521,
+          "tgt": 457,
+          "score": 45.241177607031055,
+          "count": 50,
+          "consistency": 0.23193485368147704,
+          "specificity": 0.38,
+          "distance_mm": 0.3838656249375288
+        },
+        {
+          "src": 505,
+          "tgt": 998,
+          "score": 45.235392742230616,
+          "count": 50,
+          "consistency": 0.3246753246753247,
+          "specificity": 0.4,
+          "distance_mm": 1.0317868634080907
+        },
+        {
+          "src": 400,
+          "tgt": 819,
+          "score": 45.20806406451991,
+          "count": 50,
+          "consistency": 0.1716073583692602,
+          "specificity": 0.38,
+          "distance_mm": 0.3831998258318064
+        },
+        {
+          "src": 494,
+          "tgt": 697,
+          "score": 45.205459326678834,
+          "count": 50,
+          "consistency": 0.2791181844626955,
+          "specificity": 0.4,
+          "distance_mm": 1.0805567477564337
+        },
+        {
+          "src": 417,
+          "tgt": 86,
+          "score": 45.20096096103884,
+          "count": 50,
+          "consistency": 0.16711301668417974,
+          "specificity": 0.4,
+          "distance_mm": 0.5095119813745087
+        },
+        {
+          "src": 535,
+          "tgt": 334,
+          "score": 45.16922462174515,
+          "count": 50,
+          "consistency": 0.20869758261290708,
+          "specificity": 0.4,
+          "distance_mm": 1.0555904869194188
+        },
+        {
+          "src": 562,
+          "tgt": 867,
+          "score": 45.1539275158157,
+          "count": 50,
+          "consistency": 0.25278421809020507,
+          "specificity": 0.4,
+          "distance_mm": 1.4510380413390809
+        },
+        {
+          "src": 400,
+          "tgt": 988,
+          "score": 45.108974059234086,
+          "count": 50,
+          "consistency": 0.17439561459839725,
+          "specificity": 0.32,
+          "distance_mm": 1.1494352879502803
+        },
+        {
+          "src": 24,
+          "tgt": 86,
+          "score": 44.331599952155976,
+          "count": 49,
+          "consistency": 0.18023771658515178,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 0.30796098088308516
+        }
+      ],
+      "pruned_edges": [
+        {
+          "eid": 12,
+          "src": 0,
+          "tgt": 381,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 13,
+          "src": 0,
+          "tgt": 433,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 38,
+          "src": 1,
+          "tgt": 452,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 48,
+          "src": 1,
+          "tgt": 922,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 52,
+          "src": 2,
+          "tgt": 39,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 53,
+          "src": 2,
+          "tgt": 150,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 55,
+          "src": 2,
+          "tgt": 291,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 59,
+          "src": 2,
+          "tgt": 467,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 60,
+          "src": 2,
+          "tgt": 481,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 61,
+          "src": 2,
+          "tgt": 490,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 77,
+          "src": 3,
+          "tgt": 2,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 78,
+          "src": 3,
+          "tgt": 56,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 79,
+          "src": 3,
+          "tgt": 83,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 80,
+          "src": 3,
+          "tgt": 144,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 81,
+          "src": 3,
+          "tgt": 153,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 82,
+          "src": 3,
+          "tgt": 272,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 83,
+          "src": 3,
+          "tgt": 286,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 84,
+          "src": 3,
+          "tgt": 315,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 85,
+          "src": 3,
+          "tgt": 346,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 86,
+          "src": 3,
+          "tgt": 368,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 87,
+          "src": 3,
+          "tgt": 370,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 88,
+          "src": 3,
+          "tgt": 380,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 89,
+          "src": 3,
+          "tgt": 400,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 90,
+          "src": 3,
+          "tgt": 430,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 91,
+          "src": 3,
+          "tgt": 455,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 92,
+          "src": 3,
+          "tgt": 459,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 93,
+          "src": 3,
+          "tgt": 516,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 94,
+          "src": 3,
+          "tgt": 565,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 95,
+          "src": 3,
+          "tgt": 596,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 96,
+          "src": 3,
+          "tgt": 638,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 97,
+          "src": 3,
+          "tgt": 646,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 98,
+          "src": 3,
+          "tgt": 747,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 99,
+          "src": 3,
+          "tgt": 809,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 100,
+          "src": 3,
+          "tgt": 854,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 101,
+          "src": 3,
+          "tgt": 895,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 102,
+          "src": 3,
+          "tgt": 915,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 103,
+          "src": 3,
+          "tgt": 957,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 110,
+          "src": 4,
+          "tgt": 361,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 132,
+          "src": 5,
+          "tgt": 222,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 135,
+          "src": 5,
+          "tgt": 353,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 148,
+          "src": 5,
+          "tgt": 862,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 153,
+          "src": 6,
+          "tgt": 7,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 156,
+          "src": 6,
+          "tgt": 27,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 165,
+          "src": 6,
+          "tgt": 252,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 166,
+          "src": 6,
+          "tgt": 260,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 172,
+          "src": 6,
+          "tgt": 599,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 178,
+          "src": 7,
+          "tgt": 24,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 179,
+          "src": 7,
+          "tgt": 47,
+          "usage": 0,
+          "score": 2.0
+        }
+      ],
+      "topology_metrics": {
+        "n_edges": 25193,
+        "avg_in_degree": 25.193,
+        "avg_out_degree": 25.193,
+        "std_in_degree": 5.024913034073326,
+        "std_out_degree": 5.382355525232423,
+        "mean_connection_distance_mm": 1.4157097212484684,
+        "clustering_coefficient": 0.04998031529249146,
+        "largest_component_fraction": 1.0,
+        "approx_path_length": 2.0325705705705706
+      }
+    },
+    {
+      "added": 48,
+      "removed": 48,
+      "candidate_pairs": 103029,
+      "selected_pairs": [
+        {
+          "src": 24,
+          "tgt": 697,
+          "score": 56.011237870988964,
+          "count": 62,
+          "consistency": 0.2905969983364572,
+          "specificity": 0.3225806451612903,
+          "distance_mm": 0.7762273616061325
+        },
+        {
+          "src": 24,
+          "tgt": 867,
+          "score": 55.055909824844015,
+          "count": 61,
+          "consistency": 0.21972886742793057,
+          "specificity": 0.32786885245901637,
+          "distance_mm": 0.9608859322494859
+        },
+        {
+          "src": 697,
+          "tgt": 867,
+          "score": 54.98861124531825,
+          "count": 61,
+          "consistency": 0.1910856472364262,
+          "specificity": 0.32786885245901637,
+          "distance_mm": 1.4763340164538483
+        },
+        {
+          "src": 99,
+          "tgt": 867,
+          "score": 52.37086870359673,
+          "count": 58,
+          "consistency": 0.17537513241269093,
+          "specificity": 0.3448275862068966,
+          "distance_mm": 0.6351865371301788
+        },
+        {
+          "src": 697,
+          "tgt": 839,
+          "score": 51.489814890696785,
+          "count": 57,
+          "consistency": 0.16099015533579175,
+          "specificity": 0.3333333333333333,
+          "distance_mm": 0.32063028071237454
+        },
+        {
+          "src": 399,
+          "tgt": 988,
+          "score": 51.40393790348033,
+          "count": 57,
+          "consistency": 0.1952211275090893,
+          "specificity": 0.3157894736842105,
+          "distance_mm": 1.2974950612335603
+        },
+        {
+          "src": 429,
+          "tgt": 867,
+          "score": 50.625027999925244,
+          "count": 56,
+          "consistency": 0.24190436929389822,
+          "specificity": 0.35714285714285715,
+          "distance_mm": 0.5087654604354364
+        },
+        {
+          "src": 417,
+          "tgt": 839,
+          "score": 50.535101932935305,
+          "count": 56,
+          "consistency": 0.1832426620601498,
+          "specificity": 0.35714285714285715,
+          "distance_mm": 1.085386740549228
+        },
+        {
+          "src": 505,
+          "tgt": 839,
+          "score": 50.532099208732745,
+          "count": 56,
+          "consistency": 0.19824596786558316,
+          "specificity": 0.35714285714285715,
+          "distance_mm": 1.1979321645046501
+        },
+        {
+          "src": 505,
+          "tgt": 867,
+          "score": 49.71910133293132,
+          "count": 55,
+          "consistency": 0.24918148425800166,
+          "specificity": 0.36363636363636365,
+          "distance_mm": 0.6340302886513232
+        },
+        {
+          "src": 505,
+          "tgt": 86,
+          "score": 49.69674723094512,
+          "count": 55,
+          "consistency": 0.20602527053080597,
+          "specificity": 0.36363636363636365,
+          "distance_mm": 0.6202121330137336
+        },
+        {
+          "src": 431,
+          "tgt": 867,
+          "score": 49.692469283495136,
+          "count": 55,
+          "consistency": 0.2424584921963242,
+          "specificity": 0.36363636363636365,
+          "distance_mm": 0.863374326673932
+        },
+        {
+          "src": 400,
+          "tgt": 827,
+          "score": 48.96682532104074,
+          "count": 54,
+          "consistency": 0.4489816866996426,
+          "specificity": 0.37037037037037035,
+          "distance_mm": 0.2826275479221878
+        },
+        {
+          "src": 161,
+          "tgt": 697,
+          "score": 48.76486207086534,
+          "count": 54,
+          "consistency": 0.26452874604125715,
+          "specificity": 0.37037037037037035,
+          "distance_mm": 1.2877688760549992
+        },
+        {
+          "src": 521,
+          "tgt": 988,
+          "score": 48.76430367985999,
+          "count": 54,
+          "consistency": 0.21892915625688608,
+          "specificity": 0.35185185185185186,
+          "distance_mm": 0.968480968220383
+        },
+        {
+          "src": 399,
+          "tgt": 963,
+          "score": 48.72628273156961,
+          "count": 54,
+          "consistency": 0.2275676106670328,
+          "specificity": 0.3333333333333333,
+          "distance_mm": 1.3221278763059574
+        },
+        {
+          "src": 161,
+          "tgt": 598,
+          "score": 47.92286603038852,
+          "count": 53,
+          "consistency": 0.20719280010640925,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 0.4203340589642825
+        },
+        {
+          "src": 505,
+          "tgt": 955,
+          "score": 47.88531768939378,
+          "count": 53,
+          "consistency": 0.25043513246396126,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.0336502968781807
+        },
+        {
+          "src": 278,
+          "tgt": 839,
+          "score": 47.85877990020099,
+          "count": 53,
+          "consistency": 0.2715792167952612,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.4153206526282147
+        },
+        {
+          "src": 223,
+          "tgt": 867,
+          "score": 47.85496329448521,
+          "count": 53,
+          "consistency": 0.20904059312345677,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.1095242795911249
+        },
+        {
+          "src": 598,
+          "tgt": 867,
+          "score": 47.844134310607814,
+          "count": 53,
+          "consistency": 0.2530460121844412,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.4598439232004259
+        },
+        {
+          "src": 278,
+          "tgt": 867,
+          "score": 47.822654584997636,
+          "count": 53,
+          "consistency": 0.2071049935112571,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.4219655765996841
+        },
+        {
+          "src": 429,
+          "tgt": 697,
+          "score": 47.0356416890357,
+          "count": 52,
+          "consistency": 0.34728174017438324,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 1.0920942190637293
+        },
+        {
+          "src": 779,
+          "tgt": 867,
+          "score": 47.03151308957563,
+          "count": 52,
+          "consistency": 0.2496502561742208,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 0.5964070516634804
+        },
+        {
+          "src": 521,
+          "tgt": 759,
+          "score": 47.018306533178226,
+          "count": 52,
+          "consistency": 0.2793682350233256,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 0.8919214993076243
+        },
+        {
+          "src": 535,
+          "tgt": 864,
+          "score": 47.0179879444781,
+          "count": 52,
+          "consistency": 0.21138432849020036,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 0.5211959003767284
+        },
+        {
+          "src": 576,
+          "tgt": 697,
+          "score": 46.99452537405663,
+          "count": 52,
+          "consistency": 0.29712905369410025,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 1.2274175932128302
+        },
+        {
+          "src": 399,
+          "tgt": 925,
+          "score": 46.956584210651776,
+          "count": 52,
+          "consistency": 0.2213718523678465,
+          "specificity": 0.34615384615384615,
+          "distance_mm": 1.0363184661208498
+        },
+        {
+          "src": 24,
+          "tgt": 998,
+          "score": 46.15841877193379,
+          "count": 51,
+          "consistency": 0.351004211655305,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 0.9149628957466239
+        },
+        {
+          "src": 148,
+          "tgt": 759,
+          "score": 46.15042705991199,
+          "count": 51,
+          "consistency": 0.3352535106523931,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 0.9082511604485929
+        },
+        {
+          "src": 431,
+          "tgt": 839,
+          "score": 46.071485610513726,
+          "count": 51,
+          "consistency": 0.21270410646591886,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 1.0236439314056975
+        },
+        {
+          "src": 148,
+          "tgt": 988,
+          "score": 46.04843278509794,
+          "count": 51,
+          "consistency": 0.21428330694990538,
+          "specificity": 0.35294117647058826,
+          "distance_mm": 1.1059950431274665
+        },
+        {
+          "src": 357,
+          "tgt": 839,
+          "score": 46.035349236280844,
+          "count": 51,
+          "consistency": 0.1851992106860378,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 1.2337307469451402
+        },
+        {
+          "src": 161,
+          "tgt": 998,
+          "score": 45.305522746892024,
+          "count": 50,
+          "consistency": 0.3561696986592571,
+          "specificity": 0.4,
+          "distance_mm": 0.5037058737056803
+        },
+        {
+          "src": 357,
+          "tgt": 697,
+          "score": 45.27019617910876,
+          "count": 50,
+          "consistency": 0.3935599699801061,
+          "specificity": 0.4,
+          "distance_mm": 1.0626180438029804
+        },
+        {
+          "src": 417,
+          "tgt": 429,
+          "score": 45.261501597538086,
+          "count": 50,
+          "consistency": 0.2545115076660183,
+          "specificity": 0.36,
+          "distance_mm": 0.22479731678222167
+        },
+        {
+          "src": 382,
+          "tgt": 867,
+          "score": 45.245966876042324,
+          "count": 50,
+          "consistency": 0.2831989351747965,
+          "specificity": 0.4,
+          "distance_mm": 0.6979253830380958
+        },
+        {
+          "src": 161,
+          "tgt": 955,
+          "score": 45.221616335052175,
+          "count": 50,
+          "consistency": 0.23519283233126095,
+          "specificity": 0.4,
+          "distance_mm": 0.6773972273001853
+        },
+        {
+          "src": 556,
+          "tgt": 334,
+          "score": 45.206261230365996,
+          "count": 50,
+          "consistency": 0.19681241532060423,
+          "specificity": 0.4,
+          "distance_mm": 0.6198559806032887
+        },
+        {
+          "src": 111,
+          "tgt": 759,
+          "score": 45.196875346455,
+          "count": 50,
+          "consistency": 0.3297891831597948,
+          "specificity": 0.4,
+          "distance_mm": 1.4450870428288354
+        },
+        {
+          "src": 556,
+          "tgt": 967,
+          "score": 45.19533268012842,
+          "count": 50,
+          "consistency": 0.1593510565336116,
+          "specificity": 0.4,
+          "distance_mm": 0.5231040096506141
+        },
+        {
+          "src": 535,
+          "tgt": 963,
+          "score": 45.1897347851682,
+          "count": 50,
+          "consistency": 0.22116944739282834,
+          "specificity": 0.36,
+          "distance_mm": 0.7590841089785602
+        },
+        {
+          "src": 400,
+          "tgt": 864,
+          "score": 45.1756506037495,
+          "count": 50,
+          "consistency": 0.18518518518518517,
+          "specificity": 0.4,
+          "distance_mm": 0.8620124810234596
+        },
+        {
+          "src": 166,
+          "tgt": 867,
+          "score": 45.166835315084334,
+          "count": 50,
+          "consistency": 0.24991255100715357,
+          "specificity": 0.4,
+          "distance_mm": 1.3061658796959477
+        },
+        {
+          "src": 521,
+          "tgt": 963,
+          "score": 45.160680447377615,
+          "count": 50,
+          "consistency": 0.24025307335204216,
+          "specificity": 0.38,
+          "distance_mm": 1.2345874296600814
+        },
+        {
+          "src": 759,
+          "tgt": 334,
+          "score": 45.15012300462938,
+          "count": 50,
+          "consistency": 0.21265837880108257,
+          "specificity": 0.4,
+          "distance_mm": 1.2683910371121543
+        },
+        {
+          "src": 399,
+          "tgt": 919,
+          "score": 45.13950875692427,
+          "count": 50,
+          "consistency": 0.2323127347148852,
+          "specificity": 0.34,
+          "distance_mm": 1.2426324716891963
+        },
+        {
+          "src": 429,
+          "tgt": 839,
+          "score": 45.137462727103255,
+          "count": 50,
+          "consistency": 0.1875575405319343,
+          "specificity": 0.4,
+          "distance_mm": 1.2569392018930419
+        }
+      ],
+      "pruned_edges": [
+        {
+          "eid": 34,
+          "src": 1,
+          "tgt": 379,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 54,
+          "src": 2,
+          "tgt": 528,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 132,
+          "src": 7,
+          "tgt": 62,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 133,
+          "src": 7,
+          "tgt": 77,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 134,
+          "src": 7,
+          "tgt": 189,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 135,
+          "src": 7,
+          "tgt": 198,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 136,
+          "src": 7,
+          "tgt": 326,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 137,
+          "src": 7,
+          "tgt": 340,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 138,
+          "src": 7,
+          "tgt": 356,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 139,
+          "src": 7,
+          "tgt": 377,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 140,
+          "src": 7,
+          "tgt": 388,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 141,
+          "src": 7,
+          "tgt": 404,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 142,
+          "src": 7,
+          "tgt": 490,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 143,
+          "src": 7,
+          "tgt": 555,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 144,
+          "src": 7,
+          "tgt": 649,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 145,
+          "src": 7,
+          "tgt": 656,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 146,
+          "src": 7,
+          "tgt": 657,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 147,
+          "src": 7,
+          "tgt": 666,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 148,
+          "src": 7,
+          "tgt": 720,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 149,
+          "src": 7,
+          "tgt": 754,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 150,
+          "src": 7,
+          "tgt": 770,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 151,
+          "src": 7,
+          "tgt": 775,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 152,
+          "src": 7,
+          "tgt": 904,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 153,
+          "src": 7,
+          "tgt": 990,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 157,
+          "src": 8,
+          "tgt": 254,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 162,
+          "src": 8,
+          "tgt": 391,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 199,
+          "src": 10,
+          "tgt": 100,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 211,
+          "src": 10,
+          "tgt": 491,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 256,
+          "src": 12,
+          "tgt": 90,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 266,
+          "src": 12,
+          "tgt": 489,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 281,
+          "src": 12,
+          "tgt": 949,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 308,
+          "src": 13,
+          "tgt": 764,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 327,
+          "src": 14,
+          "tgt": 373,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 333,
+          "src": 14,
+          "tgt": 563,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 336,
+          "src": 14,
+          "tgt": 659,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 339,
+          "src": 14,
+          "tgt": 752,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 347,
+          "src": 14,
+          "tgt": 935,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 353,
+          "src": 15,
+          "tgt": 156,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 363,
+          "src": 15,
+          "tgt": 578,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 364,
+          "src": 15,
+          "tgt": 592,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 375,
+          "src": 15,
+          "tgt": 990,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 376,
+          "src": 16,
+          "tgt": 17,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 381,
+          "src": 16,
+          "tgt": 241,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 383,
+          "src": 16,
+          "tgt": 291,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 392,
+          "src": 16,
+          "tgt": 554,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 399,
+          "src": 17,
+          "tgt": 1,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 400,
+          "src": 17,
+          "tgt": 30,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 401,
+          "src": 17,
+          "tgt": 59,
+          "usage": 0,
+          "score": 2.0
+        }
+      ],
+      "topology_metrics": {
+        "n_edges": 25193,
+        "avg_in_degree": 25.193,
+        "avg_out_degree": 25.193,
+        "std_in_degree": 5.085051720484266,
+        "std_out_degree": 5.4735501276593785,
+        "mean_connection_distance_mm": 1.4148791388562514,
+        "clustering_coefficient": 0.05001482486006622,
+        "largest_component_fraction": 1.0,
+        "approx_path_length": 2.032752752752753
+      }
+    },
+    {
+      "added": 48,
+      "removed": 48,
+      "candidate_pairs": 102358,
+      "selected_pairs": [
+        {
+          "src": 400,
+          "tgt": 967,
+          "score": 55.9480401092965,
+          "count": 62,
+          "consistency": 0.2284136724348027,
+          "specificity": 0.3064516129032258,
+          "distance_mm": 1.0016805570393998
+        },
+        {
+          "src": 399,
+          "tgt": 967,
+          "score": 54.98554213730113,
+          "count": 61,
+          "consistency": 0.1894285974247384,
+          "specificity": 0.3114754098360656,
+          "distance_mm": 1.4323375521690538
+        },
+        {
+          "src": 400,
+          "tgt": 334,
+          "score": 54.16298359756111,
+          "count": 60,
+          "consistency": 0.28485251026078695,
+          "specificity": 0.3333333333333333,
+          "distance_mm": 1.270186164156573
+        },
+        {
+          "src": 759,
+          "tgt": 967,
+          "score": 54.140354088055034,
+          "count": 60,
+          "consistency": 0.22265472030449643,
+          "specificity": 0.3333333333333333,
+          "distance_mm": 1.154393414457701
+        },
+        {
+          "src": 148,
+          "tgt": 967,
+          "score": 51.442081587987985,
+          "count": 57,
+          "consistency": 0.2521298912323224,
+          "specificity": 0.3333333333333333,
+          "distance_mm": 1.29923185523134
+        },
+        {
+          "src": 779,
+          "tgt": 839,
+          "score": 51.44141862626291,
+          "count": 57,
+          "consistency": 0.2612632932531806,
+          "specificity": 0.3508771929824561,
+          "distance_mm": 1.4262706221932655
+        },
+        {
+          "src": 457,
+          "tgt": 967,
+          "score": 51.41678958792558,
+          "count": 57,
+          "consistency": 0.2293045959437207,
+          "specificity": 0.3333333333333333,
+          "distance_mm": 1.426612731768052
+        },
+        {
+          "src": 357,
+          "tgt": 867,
+          "score": 50.632332369517954,
+          "count": 56,
+          "consistency": 0.26188760525761146,
+          "specificity": 0.35714285714285715,
+          "distance_mm": 0.5456295623087215
+        },
+        {
+          "src": 111,
+          "tgt": 334,
+          "score": 49.69327887304789,
+          "count": 55,
+          "consistency": 0.29920948747801956,
+          "specificity": 0.36363636363636365,
+          "distance_mm": 1.167408905195746
+        },
+        {
+          "src": 476,
+          "tgt": 759,
+          "score": 49.68555884468831,
+          "count": 55,
+          "consistency": 0.25960953860809705,
+          "specificity": 0.36363636363636365,
+          "distance_mm": 1.0268094700069061
+        },
+        {
+          "src": 521,
+          "tgt": 967,
+          "score": 49.65468806124001,
+          "count": 55,
+          "consistency": 0.2203506587567143,
+          "specificity": 0.34545454545454546,
+          "distance_mm": 1.0468661925800167
+        },
+        {
+          "src": 24,
+          "tgt": 955,
+          "score": 48.83124828162768,
+          "count": 54,
+          "consistency": 0.2923750221783371,
+          "specificity": 0.37037037037037035,
+          "distance_mm": 0.777061287185564
+        },
+        {
+          "src": 476,
+          "tgt": 967,
+          "score": 48.72843732672365,
+          "count": 54,
+          "consistency": 0.22056849720746025,
+          "specificity": 0.35185185185185186,
+          "distance_mm": 1.3361608748119664
+        },
+        {
+          "src": 400,
+          "tgt": 889,
+          "score": 48.697576849377576,
+          "count": 54,
+          "consistency": 0.17589689779702078,
+          "specificity": 0.37037037037037035,
+          "distance_mm": 1.4731459255893677
+        },
+        {
+          "src": 431,
+          "tgt": 86,
+          "score": 47.95610272387607,
+          "count": 53,
+          "consistency": 0.25902766995894955,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 0.37305890827766497
+        },
+        {
+          "src": 494,
+          "tgt": 867,
+          "score": 47.92073530198347,
+          "count": 53,
+          "consistency": 0.21286449099273816,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 0.4728356428895103
+        },
+        {
+          "src": 357,
+          "tgt": 86,
+          "score": 47.910515868099225,
+          "count": 53,
+          "consistency": 0.23521551355302261,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 0.6979606058135768
+        },
+        {
+          "src": 576,
+          "tgt": 867,
+          "score": 47.909712531936854,
+          "count": 53,
+          "consistency": 0.3449445102303674,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.3095034491626678
+        },
+        {
+          "src": 399,
+          "tgt": 864,
+          "score": 47.848103815547546,
+          "count": 53,
+          "consistency": 0.248614854703266,
+          "specificity": 0.37735849056603776,
+          "distance_mm": 1.395777507656657
+        },
+        {
+          "src": 399,
+          "tgt": 856,
+          "score": 47.81931287972819,
+          "count": 53,
+          "consistency": 0.18423071008028458,
+          "specificity": 0.33962264150943394,
+          "distance_mm": 1.178630674197502
+        },
+        {
+          "src": 111,
+          "tgt": 967,
+          "score": 46.9657873342784,
+          "count": 52,
+          "consistency": 0.2006693034123361,
+          "specificity": 0.36538461538461536,
+          "distance_mm": 0.9073462875223188
+        },
+        {
+          "src": 494,
+          "tgt": 839,
+          "score": 46.93511512350364,
+          "count": 52,
+          "consistency": 0.1896999589232618,
+          "specificity": 0.38461538461538464,
+          "distance_mm": 1.2306600775031344
+        },
+        {
+          "src": 521,
+          "tgt": 148,
+          "score": 46.1857448877804,
+          "count": 51,
+          "consistency": 0.28320530929402415,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 0.2688077742934752
+        },
+        {
+          "src": 779,
+          "tgt": 697,
+          "score": 46.128648466720826,
+          "count": 51,
+          "consistency": 0.3541005732132092,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 1.2296959364447833
+        },
+        {
+          "src": 382,
+          "tgt": 839,
+          "score": 46.12188438609602,
+          "count": 51,
+          "consistency": 0.31912544296612844,
+          "specificity": 0.39215686274509803,
+          "distance_mm": 1.1049735263338656
+        },
+        {
+          "src": 431,
+          "tgt": 697,
+          "score": 45.308704426142164,
+          "count": 50,
+          "consistency": 0.415286311628505,
+          "specificity": 0.4,
+          "distance_mm": 0.7970304525351238
+        },
+        {
+          "src": 521,
+          "tgt": 476,
+          "score": 45.27753923010129,
+          "count": 50,
+          "consistency": 0.26634280404820443,
+          "specificity": 0.4,
+          "distance_mm": 0.28949312125220833
+        },
+        {
+          "src": 161,
+          "tgt": 867,
+          "score": 45.26050653571231,
+          "count": 50,
+          "consistency": 0.3728033586019707,
+          "specificity": 0.4,
+          "distance_mm": 1.045353115187728
+        },
+        {
+          "src": 382,
+          "tgt": 86,
+          "score": 45.25744544219131,
+          "count": 50,
+          "consistency": 0.2739287110204279,
+          "specificity": 0.4,
+          "distance_mm": 0.5321534886991997
+        },
+        {
+          "src": 521,
+          "tgt": 276,
+          "score": 45.21843152273792,
+          "count": 50,
+          "consistency": 0.24010355192347999,
+          "specificity": 0.4,
+          "distance_mm": 0.7362543081998497
+        },
+        {
+          "src": 556,
+          "tgt": 864,
+          "score": 45.2059541266619,
+          "count": 50,
+          "consistency": 0.2845726961252859,
+          "specificity": 0.36,
+          "distance_mm": 0.945608562070032
+        },
+        {
+          "src": 474,
+          "tgt": 967,
+          "score": 45.18874985637579,
+          "count": 50,
+          "consistency": 0.21596537503509167,
+          "specificity": 0.38,
+          "distance_mm": 0.8203109989350477
+        },
+        {
+          "src": 400,
+          "tgt": 858,
+          "score": 45.17815917860153,
+          "count": 50,
+          "consistency": 0.1394014969423313,
+          "specificity": 0.38,
+          "distance_mm": 0.5051164471675206
+        },
+        {
+          "src": 521,
+          "tgt": 919,
+          "score": 45.13872259050068,
+          "count": 50,
+          "consistency": 0.19575111566969947,
+          "specificity": 0.36,
+          "distance_mm": 1.1294052311765568
+        },
+        {
+          "src": 276,
+          "tgt": 967,
+          "score": 45.137081454514906,
+          "count": 50,
+          "consistency": 0.24559511791465324,
+          "specificity": 0.38,
+          "distance_mm": 1.499958603381498
+        },
+        {
+          "src": 400,
+          "tgt": 919,
+          "score": 45.11693847063422,
+          "count": 50,
+          "consistency": 0.21253146942329343,
+          "specificity": 0.36,
+          "distance_mm": 1.4395383754859141
+        },
+        {
+          "src": 521,
+          "tgt": 876,
+          "score": 44.416608531353475,
+          "count": 49,
+          "consistency": 0.3794042063794979,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 0.5532908827769202
+        },
+        {
+          "src": 382,
+          "tgt": 955,
+          "score": 44.35065252380024,
+          "count": 49,
+          "consistency": 0.34166822029072486,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 1.0053030348209966
+        },
+        {
+          "src": 111,
+          "tgt": 864,
+          "score": 44.331698664973246,
+          "count": 49,
+          "consistency": 0.2316523706249851,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 0.5897544499294934
+        },
+        {
+          "src": 161,
+          "tgt": 86,
+          "score": 44.32162935547531,
+          "count": 49,
+          "consistency": 0.24830562685247948,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 0.7820404541599798
+        },
+        {
+          "src": 521,
+          "tgt": 969,
+          "score": 44.316635778021755,
+          "count": 49,
+          "consistency": 0.21246014116990053,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 0.634826057441425
+        },
+        {
+          "src": 645,
+          "tgt": 839,
+          "score": 44.31625277998615,
+          "count": 49,
+          "consistency": 0.35793159077854714,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 1.4387490106449872
+        },
+        {
+          "src": 779,
+          "tgt": 86,
+          "score": 44.311108946147094,
+          "count": 49,
+          "consistency": 0.23377293133940127,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 0.8073147221202163
+        },
+        {
+          "src": 779,
+          "tgt": 955,
+          "score": 44.31099676960698,
+          "count": 49,
+          "consistency": 0.28020342477150556,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 1.0638042013979863
+        },
+        {
+          "src": 697,
+          "tgt": 855,
+          "score": 44.304919812081174,
+          "count": 49,
+          "consistency": 0.19067217966874975,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 0.6321519285909222
+        },
+        {
+          "src": 476,
+          "tgt": 988,
+          "score": 44.284627240930796,
+          "count": 49,
+          "consistency": 0.25743882899968495,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 1.2022942114147872
+        },
+        {
+          "src": 474,
+          "tgt": 334,
+          "score": 44.27732655918609,
+          "count": 49,
+          "consistency": 0.2235163029062525,
+          "specificity": 0.40816326530612246,
+          "distance_mm": 1.0887271353479304
+        },
+        {
+          "src": 645,
+          "tgt": 867,
+          "score": 43.57787955134576,
+          "count": 48,
+          "consistency": 0.4918114063227623,
+          "specificity": 0.4166666666666667,
+          "distance_mm": 0.592833887984279
+        }
+      ],
+      "pruned_edges": [
+        {
+          "eid": 0,
+          "src": 0,
+          "tgt": 16,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 1,
+          "src": 0,
+          "tgt": 36,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 3,
+          "src": 0,
+          "tgt": 102,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 4,
+          "src": 0,
+          "tgt": 161,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 7,
+          "src": 0,
+          "tgt": 217,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 8,
+          "src": 0,
+          "tgt": 283,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 11,
+          "src": 0,
+          "tgt": 330,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 14,
+          "src": 0,
+          "tgt": 655,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 17,
+          "src": 0,
+          "tgt": 718,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 18,
+          "src": 0,
+          "tgt": 846,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 33,
+          "src": 1,
+          "tgt": 362,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 41,
+          "src": 1,
+          "tgt": 802,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 45,
+          "src": 2,
+          "tgt": 0,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 98,
+          "src": 5,
+          "tgt": 677,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 100,
+          "src": 5,
+          "tgt": 716,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 175,
+          "src": 10,
+          "tgt": 129,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 181,
+          "src": 10,
+          "tgt": 352,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 210,
+          "src": 11,
+          "tgt": 524,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 215,
+          "src": 11,
+          "tgt": 647,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 227,
+          "src": 12,
+          "tgt": 3,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 241,
+          "src": 12,
+          "tgt": 705,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 242,
+          "src": 12,
+          "tgt": 708,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 266,
+          "src": 13,
+          "tgt": 293,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 300,
+          "src": 14,
+          "tgt": 616,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 321,
+          "src": 15,
+          "tgt": 437,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 352,
+          "src": 16,
+          "tgt": 802,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 354,
+          "src": 17,
+          "tgt": 62,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 355,
+          "src": 17,
+          "tgt": 82,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 356,
+          "src": 17,
+          "tgt": 173,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 357,
+          "src": 17,
+          "tgt": 194,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 358,
+          "src": 17,
+          "tgt": 285,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 359,
+          "src": 17,
+          "tgt": 423,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 360,
+          "src": 17,
+          "tgt": 473,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 361,
+          "src": 17,
+          "tgt": 606,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 362,
+          "src": 17,
+          "tgt": 623,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 363,
+          "src": 17,
+          "tgt": 634,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 364,
+          "src": 17,
+          "tgt": 657,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 365,
+          "src": 17,
+          "tgt": 708,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 366,
+          "src": 17,
+          "tgt": 727,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 367,
+          "src": 17,
+          "tgt": 790,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 368,
+          "src": 17,
+          "tgt": 819,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 370,
+          "src": 17,
+          "tgt": 874,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 371,
+          "src": 17,
+          "tgt": 924,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 372,
+          "src": 18,
+          "tgt": 28,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 373,
+          "src": 18,
+          "tgt": 37,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 375,
+          "src": 18,
+          "tgt": 73,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 376,
+          "src": 18,
+          "tgt": 75,
+          "usage": 0,
+          "score": 2.0
+        },
+        {
+          "eid": 377,
+          "src": 18,
+          "tgt": 109,
+          "usage": 0,
+          "score": 2.0
+        }
+      ],
+      "topology_metrics": {
+        "n_edges": 25193,
+        "avg_in_degree": 25.193,
+        "avg_out_degree": 25.193,
+        "std_in_degree": 5.159045551262365,
+        "std_out_degree": 5.617984603040489,
+        "mean_connection_distance_mm": 1.4135927923272738,
+        "clustering_coefficient": 0.05018047087730396,
+        "largest_component_fraction": 1.0,
+        "approx_path_length": 2.033071071071071
+      }
+    }
+  ]
+}

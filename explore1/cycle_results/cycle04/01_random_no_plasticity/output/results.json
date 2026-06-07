@@ -1,0 +1,96 @@
+{
+  "group": "01_random_no_plasticity",
+  "config": {
+    "n_total": 1000,
+    "n_rounds": 3,
+    "reps_per_mode": 20,
+    "stimulus_gain": 40.0,
+    "seed": 42
+  },
+  "hotspots": {
+    "distance_mm": 2.16603097923721,
+    "alpha": 0.005
+  },
+  "classification": {
+    "raw_counts": [
+      {
+        "mean": 0.8416666666666666,
+        "std": 0.12610621625351298
+      },
+      {
+        "mean": 0.825,
+        "std": 0.13149778198382917
+      },
+      {
+        "mean": 0.7916666666666666,
+        "std": 0.13043729868748774
+      }
+    ],
+    "v100": [
+      {
+        "mean": 0.7583333333333334,
+        "std": 0.10833333333333335
+      },
+      {
+        "mean": 0.6916666666666667,
+        "std": 0.08374896350934075
+      },
+      {
+        "mean": 0.6416666666666666,
+        "std": 0.1181453906563152
+      }
+    ]
+  },
+  "functional_metrics": [
+    {
+      "avg_correlation": 0.08924225908487125,
+      "global_efficiency": 0.5198989898989899,
+      "modularity": 0.08087107965867245
+    },
+    {
+      "avg_correlation": 0.07197170741242588,
+      "global_efficiency": 0.47375420875420987,
+      "modularity": 0.09374229053793236
+    },
+    {
+      "avg_correlation": 0.08425111742091305,
+      "global_efficiency": 0.50003367003367,
+      "modularity": 0.07934494748287031
+    }
+  ],
+  "topology_metrics": [
+    {
+      "n_edges": 25193,
+      "avg_in_degree": 25.193,
+      "avg_out_degree": 25.193,
+      "std_in_degree": 4.988161084006811,
+      "std_out_degree": 5.245736459259081,
+      "mean_connection_distance_mm": 1.416667846295345,
+      "clustering_coefficient": 0.04994043689429264,
+      "largest_component_fraction": 1.0,
+      "approx_path_length": 2.0323523523523526
+    },
+    {
+      "n_edges": 25193,
+      "avg_in_degree": 25.193,
+      "avg_out_degree": 25.193,
+      "std_in_degree": 4.988161084006811,
+      "std_out_degree": 5.245736459259081,
+      "mean_connection_distance_mm": 1.416667846295345,
+      "clustering_coefficient": 0.04994043689429264,
+      "largest_component_fraction": 1.0,
+      "approx_path_length": 2.0323523523523526
+    },
+    {
+      "n_edges": 25193,
+      "avg_in_degree": 25.193,
+      "avg_out_degree": 25.193,
+      "std_in_degree": 4.988161084006811,
+      "std_out_degree": 5.245736459259081,
+      "mean_connection_distance_mm": 1.416667846295345,
+      "clustering_coefficient": 0.04994043689429264,
+      "largest_component_fraction": 1.0,
+      "approx_path_length": 2.0323523523523526
+    }
+  ]
+}
